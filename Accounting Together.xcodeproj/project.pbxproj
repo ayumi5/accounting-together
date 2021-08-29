@@ -1,0 +1,726 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3744378626DB356000418450 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744378526DB356000418450 /* Tests_iOS.swift */; };
+		3744379126DB356000418450 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744379026DB356000418450 /* Tests_macOS.swift */; };
+		3744379326DB356000418450 /* Accounting_Together.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3744376726DB355800418450 /* Accounting_Together.xcdatamodeld */; };
+		3744379426DB356000418450 /* Accounting_Together.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3744376726DB355800418450 /* Accounting_Together.xcdatamodeld */; };
+		3744379526DB356000418450 /* Accounting_TogetherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744376926DB355800418450 /* Accounting_TogetherApp.swift */; };
+		3744379626DB356000418450 /* Accounting_TogetherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744376926DB355800418450 /* Accounting_TogetherApp.swift */; };
+		3744379726DB356000418450 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744376A26DB355800418450 /* ContentView.swift */; };
+		3744379826DB356000418450 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744376A26DB355800418450 /* ContentView.swift */; };
+		3744379926DB356000418450 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744376B26DB355800418450 /* Persistence.swift */; };
+		3744379A26DB356000418450 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744376B26DB355800418450 /* Persistence.swift */; };
+		3744379B26DB356000418450 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3744376C26DB356000418450 /* Assets.xcassets */; };
+		3744379C26DB356000418450 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3744376C26DB356000418450 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3744378226DB356000418450 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3744376226DB355800418450 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3744377026DB356000418450;
+			remoteInfo = "Accounting Together (iOS)";
+		};
+		3744378D26DB356000418450 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3744376226DB355800418450 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3744377826DB356000418450;
+			remoteInfo = "Accounting Together (macOS)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3744376826DB355800418450 /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
+		3744376926DB355800418450 /* Accounting_TogetherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accounting_TogetherApp.swift; sourceTree = "<group>"; };
+		3744376A26DB355800418450 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3744376B26DB355800418450 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		3744376C26DB356000418450 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3744377126DB356000418450 /* Accounting Together.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Accounting Together.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3744377426DB356000418450 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3744377926DB356000418450 /* Accounting Together.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Accounting Together.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3744377B26DB356000418450 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3744377C26DB356000418450 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		3744378126DB356000418450 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3744378526DB356000418450 /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
+		3744378726DB356000418450 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3744378C26DB356000418450 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3744379026DB356000418450 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
+		3744379226DB356000418450 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3744376E26DB356000418450 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3744377626DB356000418450 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3744377E26DB356000418450 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3744378926DB356000418450 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3744376126DB355800418450 = {
+			isa = PBXGroup;
+			children = (
+				3744376626DB355800418450 /* Shared */,
+				3744377326DB356000418450 /* iOS */,
+				3744377A26DB356000418450 /* macOS */,
+				3744378426DB356000418450 /* Tests iOS */,
+				3744378F26DB356000418450 /* Tests macOS */,
+				3744377226DB356000418450 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3744376626DB355800418450 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				3744376926DB355800418450 /* Accounting_TogetherApp.swift */,
+				3744376A26DB355800418450 /* ContentView.swift */,
+				3744376B26DB355800418450 /* Persistence.swift */,
+				3744376C26DB356000418450 /* Assets.xcassets */,
+				3744376726DB355800418450 /* Accounting_Together.xcdatamodeld */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		3744377226DB356000418450 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3744377126DB356000418450 /* Accounting Together.app */,
+				3744377926DB356000418450 /* Accounting Together.app */,
+				3744378126DB356000418450 /* Tests iOS.xctest */,
+				3744378C26DB356000418450 /* Tests macOS.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3744377326DB356000418450 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3744377426DB356000418450 /* Info.plist */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		3744377A26DB356000418450 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				3744377B26DB356000418450 /* Info.plist */,
+				3744377C26DB356000418450 /* macOS.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		3744378426DB356000418450 /* Tests iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3744378526DB356000418450 /* Tests_iOS.swift */,
+				3744378726DB356000418450 /* Info.plist */,
+			);
+			path = "Tests iOS";
+			sourceTree = "<group>";
+		};
+		3744378F26DB356000418450 /* Tests macOS */ = {
+			isa = PBXGroup;
+			children = (
+				3744379026DB356000418450 /* Tests_macOS.swift */,
+				3744379226DB356000418450 /* Info.plist */,
+			);
+			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3744377026DB356000418450 /* Accounting Together (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3744379F26DB356000418450 /* Build configuration list for PBXNativeTarget "Accounting Together (iOS)" */;
+			buildPhases = (
+				3744376D26DB356000418450 /* Sources */,
+				3744376E26DB356000418450 /* Frameworks */,
+				3744376F26DB356000418450 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Accounting Together (iOS)";
+			productName = "Accounting Together (iOS)";
+			productReference = 3744377126DB356000418450 /* Accounting Together.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3744377826DB356000418450 /* Accounting Together (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 374437A226DB356000418450 /* Build configuration list for PBXNativeTarget "Accounting Together (macOS)" */;
+			buildPhases = (
+				3744377526DB356000418450 /* Sources */,
+				3744377626DB356000418450 /* Frameworks */,
+				3744377726DB356000418450 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Accounting Together (macOS)";
+			productName = "Accounting Together (macOS)";
+			productReference = 3744377926DB356000418450 /* Accounting Together.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3744378026DB356000418450 /* Tests iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 374437A526DB356000418450 /* Build configuration list for PBXNativeTarget "Tests iOS" */;
+			buildPhases = (
+				3744377D26DB356000418450 /* Sources */,
+				3744377E26DB356000418450 /* Frameworks */,
+				3744377F26DB356000418450 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3744378326DB356000418450 /* PBXTargetDependency */,
+			);
+			name = "Tests iOS";
+			productName = "Tests iOS";
+			productReference = 3744378126DB356000418450 /* Tests iOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		3744378B26DB356000418450 /* Tests macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 374437A826DB356000418450 /* Build configuration list for PBXNativeTarget "Tests macOS" */;
+			buildPhases = (
+				3744378826DB356000418450 /* Sources */,
+				3744378926DB356000418450 /* Frameworks */,
+				3744378A26DB356000418450 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3744378E26DB356000418450 /* PBXTargetDependency */,
+			);
+			name = "Tests macOS";
+			productName = "Tests macOS";
+			productReference = 3744378C26DB356000418450 /* Tests macOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3744376226DB355800418450 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					3744377026DB356000418450 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					3744377826DB356000418450 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					3744378026DB356000418450 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 3744377026DB356000418450;
+					};
+					3744378B26DB356000418450 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 3744377826DB356000418450;
+					};
+				};
+			};
+			buildConfigurationList = 3744376526DB355800418450 /* Build configuration list for PBXProject "Accounting Together" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3744376126DB355800418450;
+			productRefGroup = 3744377226DB356000418450 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3744377026DB356000418450 /* Accounting Together (iOS) */,
+				3744377826DB356000418450 /* Accounting Together (macOS) */,
+				3744378026DB356000418450 /* Tests iOS */,
+				3744378B26DB356000418450 /* Tests macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3744376F26DB356000418450 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3744379B26DB356000418450 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3744377726DB356000418450 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3744379C26DB356000418450 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3744377F26DB356000418450 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3744378A26DB356000418450 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3744376D26DB356000418450 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3744379526DB356000418450 /* Accounting_TogetherApp.swift in Sources */,
+				3744379926DB356000418450 /* Persistence.swift in Sources */,
+				3744379326DB356000418450 /* Accounting_Together.xcdatamodeld in Sources */,
+				3744379726DB356000418450 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3744377526DB356000418450 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3744379626DB356000418450 /* Accounting_TogetherApp.swift in Sources */,
+				3744379A26DB356000418450 /* Persistence.swift in Sources */,
+				3744379426DB356000418450 /* Accounting_Together.xcdatamodeld in Sources */,
+				3744379826DB356000418450 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3744377D26DB356000418450 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3744378626DB356000418450 /* Tests_iOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3744378826DB356000418450 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3744379126DB356000418450 /* Tests_macOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3744378326DB356000418450 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3744377026DB356000418450 /* Accounting Together (iOS) */;
+			targetProxy = 3744378226DB356000418450 /* PBXContainerItemProxy */;
+		};
+		3744378E26DB356000418450 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3744377826DB356000418450 /* Accounting Together (macOS) */;
+			targetProxy = 3744378D26DB356000418450 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3744379D26DB356000418450 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3744379E26DB356000418450 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		374437A026DB356000418450 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K5DT8G4M9K;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.auda.Accounting-Together";
+				PRODUCT_NAME = "Accounting Together";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		374437A126DB356000418450 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K5DT8G4M9K;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.auda.Accounting-Together";
+				PRODUCT_NAME = "Accounting Together";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		374437A326DB356000418450 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = K5DT8G4M9K;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.auda.Accounting-Together";
+				PRODUCT_NAME = "Accounting Together";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		374437A426DB356000418450 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = K5DT8G4M9K;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.auda.Accounting-Together";
+				PRODUCT_NAME = "Accounting Together";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		374437A626DB356000418450 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K5DT8G4M9K;
+				INFOPLIST_FILE = "Tests iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.auda.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Accounting Together (iOS)";
+			};
+			name = Debug;
+		};
+		374437A726DB356000418450 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K5DT8G4M9K;
+				INFOPLIST_FILE = "Tests iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.auda.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Accounting Together (iOS)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		374437A926DB356000418450 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = K5DT8G4M9K;
+				INFOPLIST_FILE = "Tests macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.auda.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Accounting Together (macOS)";
+			};
+			name = Debug;
+		};
+		374437AA26DB356000418450 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = K5DT8G4M9K;
+				INFOPLIST_FILE = "Tests macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.auda.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Accounting Together (macOS)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3744376526DB355800418450 /* Build configuration list for PBXProject "Accounting Together" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3744379D26DB356000418450 /* Debug */,
+				3744379E26DB356000418450 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3744379F26DB356000418450 /* Build configuration list for PBXNativeTarget "Accounting Together (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				374437A026DB356000418450 /* Debug */,
+				374437A126DB356000418450 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		374437A226DB356000418450 /* Build configuration list for PBXNativeTarget "Accounting Together (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				374437A326DB356000418450 /* Debug */,
+				374437A426DB356000418450 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		374437A526DB356000418450 /* Build configuration list for PBXNativeTarget "Tests iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				374437A626DB356000418450 /* Debug */,
+				374437A726DB356000418450 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		374437A826DB356000418450 /* Build configuration list for PBXNativeTarget "Tests macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				374437A926DB356000418450 /* Debug */,
+				374437AA26DB356000418450 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3744376726DB355800418450 /* Accounting_Together.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3744376826DB355800418450 /* Shared.xcdatamodel */,
+			);
+			currentVersion = 3744376826DB355800418450 /* Shared.xcdatamodel */;
+			path = Accounting_Together.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 3744376226DB355800418450 /* Project object */;
+}
