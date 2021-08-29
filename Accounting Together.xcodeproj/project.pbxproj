@@ -19,6 +19,10 @@
 		3744379A26DB356000418450 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744376B26DB355800418450 /* Persistence.swift */; };
 		3744379B26DB356000418450 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3744376C26DB356000418450 /* Assets.xcassets */; };
 		3744379C26DB356000418450 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3744376C26DB356000418450 /* Assets.xcassets */; };
+		3752A53D26DB796E00382F71 /* ReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3752A53C26DB796E00382F71 /* ReportView.swift */; };
+		3752A53E26DB796E00382F71 /* ReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3752A53C26DB796E00382F71 /* ReportView.swift */; };
+		3752A54026DB7BEF00382F71 /* RecordItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3752A53F26DB7BEF00382F71 /* RecordItemView.swift */; };
+		3752A54126DB7BEF00382F71 /* RecordItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3752A53F26DB7BEF00382F71 /* RecordItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,8 @@
 		3744378C26DB356000418450 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3744379026DB356000418450 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		3744379226DB356000418450 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3752A53C26DB796E00382F71 /* ReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportView.swift; sourceTree = "<group>"; };
+		3752A53F26DB7BEF00382F71 /* RecordItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,8 +110,8 @@
 		3744376626DB355800418450 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				3752A53B26DB794D00382F71 /* Views */,
 				3744376926DB355800418450 /* Accounting_TogetherApp.swift */,
-				3744376A26DB355800418450 /* ContentView.swift */,
 				3744376B26DB355800418450 /* Persistence.swift */,
 				3744376C26DB356000418450 /* Assets.xcassets */,
 				3744376726DB355800418450 /* Accounting_Together.xcdatamodeld */,
@@ -157,6 +163,16 @@
 				3744379226DB356000418450 /* Info.plist */,
 			);
 			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		3752A53B26DB794D00382F71 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3744376A26DB355800418450 /* ContentView.swift */,
+				3752A53F26DB7BEF00382F71 /* RecordItemView.swift */,
+				3752A53C26DB796E00382F71 /* ReportView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,9 +332,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3752A54026DB7BEF00382F71 /* RecordItemView.swift in Sources */,
 				3744379526DB356000418450 /* Accounting_TogetherApp.swift in Sources */,
 				3744379926DB356000418450 /* Persistence.swift in Sources */,
 				3744379326DB356000418450 /* Accounting_Together.xcdatamodeld in Sources */,
+				3752A53D26DB796E00382F71 /* ReportView.swift in Sources */,
 				3744379726DB356000418450 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,9 +345,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3752A54126DB7BEF00382F71 /* RecordItemView.swift in Sources */,
 				3744379626DB356000418450 /* Accounting_TogetherApp.swift in Sources */,
 				3744379A26DB356000418450 /* Persistence.swift in Sources */,
 				3744379426DB356000418450 /* Accounting_Together.xcdatamodeld in Sources */,
+				3752A53E26DB796E00382F71 /* ReportView.swift in Sources */,
 				3744379826DB356000418450 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
