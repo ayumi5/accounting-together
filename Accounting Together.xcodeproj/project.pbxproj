@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -23,6 +23,12 @@
 		3752A53E26DB796E00382F71 /* ReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3752A53C26DB796E00382F71 /* ReportView.swift */; };
 		3752A54026DB7BEF00382F71 /* RecordItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3752A53F26DB7BEF00382F71 /* RecordItemView.swift */; };
 		3752A54126DB7BEF00382F71 /* RecordItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3752A53F26DB7BEF00382F71 /* RecordItemView.swift */; };
+		3752A54326DB872D00382F71 /* MonthYearPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3752A54226DB872D00382F71 /* MonthYearPicker.swift */; };
+		3752A54426DB872D00382F71 /* MonthYearPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3752A54226DB872D00382F71 /* MonthYearPicker.swift */; };
+		3752A54626DB8FC300382F71 /* PieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3752A54526DB8FC300382F71 /* PieChart.swift */; };
+		3752A54726DB8FC300382F71 /* PieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3752A54526DB8FC300382F71 /* PieChart.swift */; };
+		3F02556DB75C94314200706C /* Pods_Accounting_Together__macOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C46AABB82E9DD78E2E11433B /* Pods_Accounting_Together__macOS_.framework */; };
+		A1E5004CA2A315F7F45CEA07 /* Pods_Accounting_Together__iOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D41D52D6407747C23961140 /* Pods_Accounting_Together__iOS_.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		330449A4C02F5DBDA6CBDD16 /* Pods-Accounting Together (iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Accounting Together (iOS).release.xcconfig"; path = "Target Support Files/Pods-Accounting Together (iOS)/Pods-Accounting Together (iOS).release.xcconfig"; sourceTree = "<group>"; };
 		3744376826DB355800418450 /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
 		3744376926DB355800418450 /* Accounting_TogetherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accounting_TogetherApp.swift; sourceTree = "<group>"; };
 		3744376A26DB355800418450 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,6 +68,13 @@
 		3744379226DB356000418450 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3752A53C26DB796E00382F71 /* ReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportView.swift; sourceTree = "<group>"; };
 		3752A53F26DB7BEF00382F71 /* RecordItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordItemView.swift; sourceTree = "<group>"; };
+		3752A54226DB872D00382F71 /* MonthYearPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthYearPicker.swift; sourceTree = "<group>"; };
+		3752A54526DB8FC300382F71 /* PieChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChart.swift; sourceTree = "<group>"; };
+		38E90B30A3359B1D52521B93 /* Pods-Accounting Together (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Accounting Together (macOS).debug.xcconfig"; path = "Target Support Files/Pods-Accounting Together (macOS)/Pods-Accounting Together (macOS).debug.xcconfig"; sourceTree = "<group>"; };
+		5D41D52D6407747C23961140 /* Pods_Accounting_Together__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Accounting_Together__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		81CF079048D50961DF7E8D01 /* Pods-Accounting Together (macOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Accounting Together (macOS).release.xcconfig"; path = "Target Support Files/Pods-Accounting Together (macOS)/Pods-Accounting Together (macOS).release.xcconfig"; sourceTree = "<group>"; };
+		8FC0785C38E9D31CA79E25D1 /* Pods-Accounting Together (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Accounting Together (iOS).debug.xcconfig"; path = "Target Support Files/Pods-Accounting Together (iOS)/Pods-Accounting Together (iOS).debug.xcconfig"; sourceTree = "<group>"; };
+		C46AABB82E9DD78E2E11433B /* Pods_Accounting_Together__macOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Accounting_Together__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1E5004CA2A315F7F45CEA07 /* Pods_Accounting_Together__iOS_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F02556DB75C94314200706C /* Pods_Accounting_Together__macOS_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +120,8 @@
 				3744378426DB356000418450 /* Tests iOS */,
 				3744378F26DB356000418450 /* Tests macOS */,
 				3744377226DB356000418450 /* Products */,
+				585DAD6CD216BC345E902184 /* Pods */,
+				BC263E8C0C0B3FA6F700CE08 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -169,10 +187,32 @@
 			isa = PBXGroup;
 			children = (
 				3744376A26DB355800418450 /* ContentView.swift */,
+				3752A54226DB872D00382F71 /* MonthYearPicker.swift */,
 				3752A53F26DB7BEF00382F71 /* RecordItemView.swift */,
 				3752A53C26DB796E00382F71 /* ReportView.swift */,
+				3752A54526DB8FC300382F71 /* PieChart.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		585DAD6CD216BC345E902184 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8FC0785C38E9D31CA79E25D1 /* Pods-Accounting Together (iOS).debug.xcconfig */,
+				330449A4C02F5DBDA6CBDD16 /* Pods-Accounting Together (iOS).release.xcconfig */,
+				38E90B30A3359B1D52521B93 /* Pods-Accounting Together (macOS).debug.xcconfig */,
+				81CF079048D50961DF7E8D01 /* Pods-Accounting Together (macOS).release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BC263E8C0C0B3FA6F700CE08 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5D41D52D6407747C23961140 /* Pods_Accounting_Together__iOS_.framework */,
+				C46AABB82E9DD78E2E11433B /* Pods_Accounting_Together__macOS_.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,9 +222,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3744379F26DB356000418450 /* Build configuration list for PBXNativeTarget "Accounting Together (iOS)" */;
 			buildPhases = (
+				FD8192BE4359F96C71268600 /* [CP] Check Pods Manifest.lock */,
 				3744376D26DB356000418450 /* Sources */,
 				3744376E26DB356000418450 /* Frameworks */,
 				3744376F26DB356000418450 /* Resources */,
+				F7588562CC61719FA49DCAAE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -199,6 +241,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 374437A226DB356000418450 /* Build configuration list for PBXNativeTarget "Accounting Together (macOS)" */;
 			buildPhases = (
+				497DB5EB25E367BED0E3086F /* [CP] Check Pods Manifest.lock */,
 				3744377526DB356000418450 /* Sources */,
 				3744377626DB356000418450 /* Frameworks */,
 				3744377726DB356000418450 /* Resources */,
@@ -327,15 +370,81 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		497DB5EB25E367BED0E3086F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Accounting Together (macOS)-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7588562CC61719FA49DCAAE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Accounting Together (iOS)/Pods-Accounting Together (iOS)-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Accounting Together (iOS)/Pods-Accounting Together (iOS)-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Accounting Together (iOS)/Pods-Accounting Together (iOS)-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD8192BE4359F96C71268600 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Accounting Together (iOS)-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3744376D26DB356000418450 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				3752A54026DB7BEF00382F71 /* RecordItemView.swift in Sources */,
+				3752A54326DB872D00382F71 /* MonthYearPicker.swift in Sources */,
 				3744379526DB356000418450 /* Accounting_TogetherApp.swift in Sources */,
 				3744379926DB356000418450 /* Persistence.swift in Sources */,
 				3744379326DB356000418450 /* Accounting_Together.xcdatamodeld in Sources */,
+				3752A54626DB8FC300382F71 /* PieChart.swift in Sources */,
 				3752A53D26DB796E00382F71 /* ReportView.swift in Sources */,
 				3744379726DB356000418450 /* ContentView.swift in Sources */,
 			);
@@ -346,9 +455,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3752A54126DB7BEF00382F71 /* RecordItemView.swift in Sources */,
+				3752A54426DB872D00382F71 /* MonthYearPicker.swift in Sources */,
 				3744379626DB356000418450 /* Accounting_TogetherApp.swift in Sources */,
 				3744379A26DB356000418450 /* Persistence.swift in Sources */,
 				3744379426DB356000418450 /* Accounting_Together.xcdatamodeld in Sources */,
+				3752A54726DB8FC300382F71 /* PieChart.swift in Sources */,
 				3752A53E26DB796E00382F71 /* ReportView.swift in Sources */,
 				3744379826DB356000418450 /* ContentView.swift in Sources */,
 			);
@@ -499,6 +610,7 @@
 		};
 		374437A026DB356000418450 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FC0785C38E9D31CA79E25D1 /* Pods-Accounting Together (iOS).debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -521,6 +633,7 @@
 		};
 		374437A126DB356000418450 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 330449A4C02F5DBDA6CBDD16 /* Pods-Accounting Together (iOS).release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -544,6 +657,7 @@
 		};
 		374437A326DB356000418450 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38E90B30A3359B1D52521B93 /* Pods-Accounting Together (macOS).debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -568,6 +682,7 @@
 		};
 		374437A426DB356000418450 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81CF079048D50961DF7E8D01 /* Pods-Accounting Together (macOS).release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

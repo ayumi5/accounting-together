@@ -8,8 +8,17 @@
 import SwiftUI
 
 struct ReportView: View {
+    let monthYearPicker: some View = MonthYearPicker()
+    let pieChart: some View = PieChart()
     var body: some View {
-        Text("Report page")
+        VStack {
+            monthYearPicker
+            Text("¥250,000")
+                .padding()
+                .font(.largeTitle)
+            Spacer()
+            pieChart
+        }
     }
 }
 
