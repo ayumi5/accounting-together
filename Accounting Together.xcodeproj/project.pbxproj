@@ -27,6 +27,10 @@
 		3752A54426DB872D00382F71 /* MonthYearPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3752A54226DB872D00382F71 /* MonthYearPicker.swift */; };
 		3752A54626DB8FC300382F71 /* PieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3752A54526DB8FC300382F71 /* PieChart.swift */; };
 		3752A54726DB8FC300382F71 /* PieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3752A54526DB8FC300382F71 /* PieChart.swift */; };
+		3752A54D26DC793300382F71 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3752A54C26DC793300382F71 /* Record.swift */; };
+		3752A54E26DC793300382F71 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3752A54C26DC793300382F71 /* Record.swift */; };
+		3752A55026DC7ABF00382F71 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3752A54F26DC7ABF00382F71 /* Account.swift */; };
+		3752A55126DC7ABF00382F71 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3752A54F26DC7ABF00382F71 /* Account.swift */; };
 		3F02556DB75C94314200706C /* Pods_Accounting_Together__macOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C46AABB82E9DD78E2E11433B /* Pods_Accounting_Together__macOS_.framework */; };
 		A1E5004CA2A315F7F45CEA07 /* Pods_Accounting_Together__iOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D41D52D6407747C23961140 /* Pods_Accounting_Together__iOS_.framework */; };
 /* End PBXBuildFile section */
@@ -70,6 +74,8 @@
 		3752A53F26DB7BEF00382F71 /* RecordItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordItemView.swift; sourceTree = "<group>"; };
 		3752A54226DB872D00382F71 /* MonthYearPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthYearPicker.swift; sourceTree = "<group>"; };
 		3752A54526DB8FC300382F71 /* PieChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChart.swift; sourceTree = "<group>"; };
+		3752A54C26DC793300382F71 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
+		3752A54F26DC7ABF00382F71 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		38E90B30A3359B1D52521B93 /* Pods-Accounting Together (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Accounting Together (macOS).debug.xcconfig"; path = "Target Support Files/Pods-Accounting Together (macOS)/Pods-Accounting Together (macOS).debug.xcconfig"; sourceTree = "<group>"; };
 		5D41D52D6407747C23961140 /* Pods_Accounting_Together__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Accounting_Together__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81CF079048D50961DF7E8D01 /* Pods-Accounting Together (macOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Accounting Together (macOS).release.xcconfig"; path = "Target Support Files/Pods-Accounting Together (macOS)/Pods-Accounting Together (macOS).release.xcconfig"; sourceTree = "<group>"; };
@@ -133,6 +139,7 @@
 				3744376B26DB355800418450 /* Persistence.swift */,
 				3744376C26DB356000418450 /* Assets.xcassets */,
 				3744376726DB355800418450 /* Accounting_Together.xcdatamodeld */,
+				3752A54B26DC761100382F71 /* Data */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -193,6 +200,15 @@
 				3752A54526DB8FC300382F71 /* PieChart.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		3752A54B26DC761100382F71 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				3752A54C26DC793300382F71 /* Record.swift */,
+				3752A54F26DC7ABF00382F71 /* Account.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		585DAD6CD216BC345E902184 /* Pods */ = {
@@ -444,6 +460,8 @@
 				3744379526DB356000418450 /* Accounting_TogetherApp.swift in Sources */,
 				3744379926DB356000418450 /* Persistence.swift in Sources */,
 				3744379326DB356000418450 /* Accounting_Together.xcdatamodeld in Sources */,
+				3752A55026DC7ABF00382F71 /* Account.swift in Sources */,
+				3752A54D26DC793300382F71 /* Record.swift in Sources */,
 				3752A54626DB8FC300382F71 /* PieChart.swift in Sources */,
 				3752A53D26DB796E00382F71 /* ReportView.swift in Sources */,
 				3744379726DB356000418450 /* ContentView.swift in Sources */,
@@ -459,6 +477,8 @@
 				3744379626DB356000418450 /* Accounting_TogetherApp.swift in Sources */,
 				3744379A26DB356000418450 /* Persistence.swift in Sources */,
 				3744379426DB356000418450 /* Accounting_Together.xcdatamodeld in Sources */,
+				3752A55126DC7ABF00382F71 /* Account.swift in Sources */,
+				3752A54E26DC793300382F71 /* Record.swift in Sources */,
 				3752A54726DB8FC300382F71 /* PieChart.swift in Sources */,
 				3752A53E26DB796E00382F71 /* ReportView.swift in Sources */,
 				3744379826DB356000418450 /* ContentView.swift in Sources */,
