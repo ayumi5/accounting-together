@@ -33,6 +33,8 @@
 		3752A55126DC7ABF00382F71 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3752A54F26DC7ABF00382F71 /* Account.swift */; };
 		3754F92126E06EC200ED1FC4 /* UIScreen+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3754F92026E06EC200ED1FC4 /* UIScreen+Size.swift */; };
 		3754F92226E06EC200ED1FC4 /* UIScreen+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3754F92026E06EC200ED1FC4 /* UIScreen+Size.swift */; };
+		3754F92426E0A7F500ED1FC4 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3754F92326E0A7F500ED1FC4 /* SettingsView.swift */; };
+		3754F92526E0A7F500ED1FC4 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3754F92326E0A7F500ED1FC4 /* SettingsView.swift */; };
 		3F02556DB75C94314200706C /* Pods_Accounting_Together__macOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C46AABB82E9DD78E2E11433B /* Pods_Accounting_Together__macOS_.framework */; };
 		A1E5004CA2A315F7F45CEA07 /* Pods_Accounting_Together__iOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D41D52D6407747C23961140 /* Pods_Accounting_Together__iOS_.framework */; };
 /* End PBXBuildFile section */
@@ -79,6 +81,7 @@
 		3752A54C26DC793300382F71 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		3752A54F26DC7ABF00382F71 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		3754F92026E06EC200ED1FC4 /* UIScreen+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Size.swift"; sourceTree = "<group>"; };
+		3754F92326E0A7F500ED1FC4 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		38E90B30A3359B1D52521B93 /* Pods-Accounting Together (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Accounting Together (macOS).debug.xcconfig"; path = "Target Support Files/Pods-Accounting Together (macOS)/Pods-Accounting Together (macOS).debug.xcconfig"; sourceTree = "<group>"; };
 		5D41D52D6407747C23961140 /* Pods_Accounting_Together__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Accounting_Together__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81CF079048D50961DF7E8D01 /* Pods-Accounting Together (macOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Accounting Together (macOS).release.xcconfig"; path = "Target Support Files/Pods-Accounting Together (macOS)/Pods-Accounting Together (macOS).release.xcconfig"; sourceTree = "<group>"; };
@@ -202,6 +205,7 @@
 				3752A53F26DB7BEF00382F71 /* RecordItemView.swift */,
 				3752A53C26DB796E00382F71 /* ReportView.swift */,
 				3752A54526DB8FC300382F71 /* PieChart.swift */,
+				3754F92326E0A7F500ED1FC4 /* SettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -476,6 +480,7 @@
 				3752A54D26DC793300382F71 /* Record.swift in Sources */,
 				3752A54626DB8FC300382F71 /* PieChart.swift in Sources */,
 				3752A53D26DB796E00382F71 /* ReportView.swift in Sources */,
+				3754F92426E0A7F500ED1FC4 /* SettingsView.swift in Sources */,
 				3754F92126E06EC200ED1FC4 /* UIScreen+Size.swift in Sources */,
 				3744379726DB356000418450 /* ContentView.swift in Sources */,
 			);
@@ -494,6 +499,7 @@
 				3752A54E26DC793300382F71 /* Record.swift in Sources */,
 				3752A54726DB8FC300382F71 /* PieChart.swift in Sources */,
 				3752A53E26DB796E00382F71 /* ReportView.swift in Sources */,
+				3754F92526E0A7F500ED1FC4 /* SettingsView.swift in Sources */,
 				3754F92226E06EC200ED1FC4 /* UIScreen+Size.swift in Sources */,
 				3744379826DB356000418450 /* ContentView.swift in Sources */,
 			);

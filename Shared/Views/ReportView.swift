@@ -18,7 +18,7 @@ struct ReportView: View {
             monthYearPicker
             Text("\(unit) \(records.totalExpenseAmount())")
                 .padding()
-                .font(.largeTitle)
+                .font(.title)
             Spacer()
             PieChart(records: records)
             Spacer()

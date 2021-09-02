@@ -19,24 +19,40 @@ struct ContentView: View {
         Record(id: 6, category: "Gardening", imageName: "chart.pie.fill", expense: 5739)
     ]
     var body: some View {
-        // TODO: put navigation
-        TabView {
-            ReportView(records: records)
-                .tabItem {
-                    VStack {
-                        Image(systemName: "chart.pie.fill")
-                        Text("Report")
+        NavigationView {
+            TabView {
+                ReportView(records: records)
+                    .tabItem {
+                        VStack {
+                            Image(systemName: "chart.pie.fill")
+                            Text("Report")
+                        }
                     }
-                }
-                .tag(1)
-            RecordItemView()
-                .tabItem {
-                    VStack {
-                        Image(systemName: "pencil")
-                        Text("Record")
+                    .tag(1)
+                RecordItemView()
+                    .tabItem {
+                        VStack {
+                            Image(systemName: "pencil")
+                            Text("Record")
+                        }
                     }
+                    .tag(2)
+            }
+            .navigationTitle("Report")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    NavigationLink(
+                        destination: SettingsView()) {
+                        // TODO: change the button color 
+                        Button(action: {
+                            
+                        }){
+                            Image(systemName: "gearshape.fill")
+                        }
+                        }
                 }
-                .tag(2)
+            }
         }
     }
 }
