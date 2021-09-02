@@ -25,6 +25,8 @@ struct ReportView: View {
             List(records, id: \.self) { record in
                 HStack {
                     record.image
+                        .resizable().scaledToFit()
+                        .frame(width: 25)
                     Text(record.category)
                     Spacer()
                     Text("\(unit) \(record.expense)")

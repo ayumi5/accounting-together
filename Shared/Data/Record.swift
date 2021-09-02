@@ -15,7 +15,7 @@ struct Record: Hashable {
     var expense: Int
     
     var image: Image {
-        Image(systemName: imageName)
+        Image(imageName)
     }
 }
 
