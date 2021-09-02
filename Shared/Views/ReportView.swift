@@ -10,8 +10,9 @@ import SwiftUI
 struct ReportView: View {
     var records = [Record]()
     let monthYearPicker: some View = MonthYearPicker()
+    private let unit: String = "¥"
+    private let listHeight:CGFloat = 0.25
     
-    let unit: String = "¥"
     var body: some View {
         VStack {
             monthYearPicker
@@ -19,10 +20,8 @@ struct ReportView: View {
                 .padding()
                 .font(.largeTitle)
             Spacer()
-            // TODO: make it look more pretty
             PieChart(records: records)
             Spacer()
-            // TODO: fixate the height and make it scrollable
             List(records, id: \.self) { record in
                 HStack {
                     record.image
@@ -31,6 +30,8 @@ struct ReportView: View {
                     Text("\(unit) \(record.expense)")
                 }
             }
+            .frame(height: UIScreen.height*listHeight)
+            .padding()
          }
     }
 }
