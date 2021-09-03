@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		372247F826E0C6320084D324 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 372247F726E0C6320084D324 /* Color.xcassets */; };
+		372247F926E0C6320084D324 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 372247F726E0C6320084D324 /* Color.xcassets */; };
 		3744378626DB356000418450 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744378526DB356000418450 /* Tests_iOS.swift */; };
 		3744379126DB356000418450 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744379026DB356000418450 /* Tests_macOS.swift */; };
 		3744379326DB356000418450 /* Accounting_Together.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3744376726DB355800418450 /* Accounting_Together.xcdatamodeld */; };
@@ -58,6 +60,7 @@
 
 /* Begin PBXFileReference section */
 		330449A4C02F5DBDA6CBDD16 /* Pods-Accounting Together (iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Accounting Together (iOS).release.xcconfig"; path = "Target Support Files/Pods-Accounting Together (iOS)/Pods-Accounting Together (iOS).release.xcconfig"; sourceTree = "<group>"; };
+		372247F726E0C6320084D324 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		3744376826DB355800418450 /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
 		3744376926DB355800418450 /* Accounting_TogetherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accounting_TogetherApp.swift; sourceTree = "<group>"; };
 		3744376A26DB355800418450 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -145,6 +148,7 @@
 				3744376926DB355800418450 /* Accounting_TogetherApp.swift */,
 				3744376B26DB355800418450 /* Persistence.swift */,
 				3744376C26DB356000418450 /* Assets.xcassets */,
+				372247F726E0C6320084D324 /* Color.xcassets */,
 				3744376726DB355800418450 /* Accounting_Together.xcdatamodeld */,
 				3752A54B26DC761100382F71 /* Data */,
 			);
@@ -374,6 +378,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				372247F826E0C6320084D324 /* Color.xcassets in Resources */,
 				3744379B26DB356000418450 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -382,6 +387,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				372247F926E0C6320084D324 /* Color.xcassets in Resources */,
 				3744379C26DB356000418450 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
