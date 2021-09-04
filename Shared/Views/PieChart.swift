@@ -13,6 +13,16 @@ struct PieChart: UIViewRepresentable {
     
     func makeUIView(context: Context) -> PieChartView {
         let pieChart = PieChartView()
+        pieChart.data = getData()
+        
+        return pieChart
+    }
+    
+    func updateUIView(_ uiView: PieChartView, context: Context) {
+        uiView.data = getData()
+    }
+    
+    private func getData() -> PieChartData {
         let data = PieChartData()
         let entries = convertRecordsToEntries()
         let dataSet = PieChartDataSet(entries: entries)
@@ -34,13 +44,8 @@ struct PieChart: UIViewRepresentable {
         
         data.addDataSet(dataSet)
         data.setValueTextColor(color)
-        pieChart.data = data
         
-        return pieChart
-    }
-    
-    func updateUIView(_ uiView: PieChartView, context: Context) {
-        // TODO: later
+        return data
     }
     
     private func convertRecordsToEntries() -> [PieChartDataEntry] {
