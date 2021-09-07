@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct Record: Hashable {
+struct Record2: Hashable {
     var id: Int
     var category: String
     var imageName: String
@@ -19,7 +19,7 @@ struct Record: Hashable {
     }
 }
 
-extension Array where Element == Record {
+extension Array where Element == Record2 {
     func totalExpenseAmount() -> Int {
         var total: Int = 0
         _ = self.map { total+=$0.expense }

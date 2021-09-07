@@ -9,7 +9,7 @@ import SwiftUI
 import Charts
 
 struct PieChart: UIViewRepresentable {
-    var records = [Record]()
+    var records = [Record2]()
     
     func makeUIView(context: Context) -> PieChartView {
         let pieChart = PieChartView()
@@ -64,12 +64,12 @@ struct PieChart: UIViewRepresentable {
 struct PieChart_Previews: PreviewProvider {
     static var previews: some View {
         let records = [
-            Record(id: 1, category: "Food", imageName: "chart.pie.fill", expense: 51924),
-            Record(id: 2, category: "Household items", imageName: "chart.pie.fill", expense: 3270),
-            Record(id: 3, category: "Gift", imageName: "chart.pie.fill", expense: 6730),
-            Record(id: 4, category: "Utility", imageName: "chart.pie.fill", expense: 2460),
-            Record(id: 5, category: "Car", imageName: "chart.pie.fill", expense: 4160),
-            Record(id: 6, category: "Gardening", imageName: "chart.pie.fill", expense: 5739)
+            Record2(id: 1, category: "Food", imageName: "chart.pie.fill", expense: 51924),
+            Record2(id: 2, category: "Household items", imageName: "chart.pie.fill", expense: 3270),
+            Record2(id: 3, category: "Gift", imageName: "chart.pie.fill", expense: 6730),
+            Record2(id: 4, category: "Utility", imageName: "chart.pie.fill", expense: 2460),
+            Record2(id: 5, category: "Car", imageName: "chart.pie.fill", expense: 4160),
+            Record2(id: 6, category: "Gardening", imageName: "chart.pie.fill", expense: 5739)
         ]
         PieChart(records: records)
     }

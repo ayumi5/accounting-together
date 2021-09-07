@@ -6,10 +6,18 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct RecordItemView: View {
     var body: some View {
-        Text("Record Item")
+        VStack {
+            Text("Record Item")
+            Spacer()
+            Button(action: {
+            }, label: {
+                Text("OK")
+            })
+        }
     }
 }
 

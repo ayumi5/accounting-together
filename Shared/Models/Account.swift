@@ -7,12 +7,14 @@
 
 import Foundation
 import SwiftUI
+import RealmSwift
 
-class Account {
-    var id: Int
-    var name: String
+class Account: EmbeddedObject {
+    @Persisted var id: Int
+    @Persisted var name: String
     
-    init(id: Int, name: String) {
+    convenience init(id: Int, name: String) {
+        self.init()
         self.id = id
         self.name = name
     }

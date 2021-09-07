@@ -7,6 +7,7 @@ target 'Accounting Together (iOS)' do
 
   # Pods for Accounting Together (iOS)
   pod 'Charts'
+  pod 'RealmSwift', '~>10'
 
 end
 

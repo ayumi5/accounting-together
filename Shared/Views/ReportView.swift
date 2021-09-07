@@ -6,35 +6,36 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct ReportView: View {
     @State private var currentYearMonth: Int = 0
     
     private let unit: String = "¥"
     private let listHeight:CGFloat = 0.25
-    private var records = [[Record]]()
+    private var records = [[Record2]]()
     // TODO: dummy data
     let records_7 = [
-        Record(id: 1, category: "Food", imageName: "food", expense: 51924),
-        Record(id: 2, category: "Household items", imageName: "household_items", expense: 3270),
-        Record(id: 3, category: "Gift", imageName: "gift", expense: 6730),
-        Record(id: 4, category: "Utilities", imageName: "utility", expense: 2460),
-        Record(id: 5, category: "Car", imageName: "car", expense: 4160),
-        Record(id: 6, category: "Gardening", imageName: "gardening", expense: 5739)
+        Record2(id: 1, category: "Food", imageName: "food", expense: 51924),
+        Record2(id: 2, category: "Household items", imageName: "household_items", expense: 3270),
+        Record2(id: 3, category: "Gift", imageName: "gift", expense: 6730),
+        Record2(id: 4, category: "Utilities", imageName: "utility", expense: 2460),
+        Record2(id: 5, category: "Car", imageName: "car", expense: 4160),
+        Record2(id: 6, category: "Gardening", imageName: "gardening", expense: 5739)
     ]
     let records_8 = [
-        Record(id: 1, category: "Food", imageName: "food", expense: 43098),
-        Record(id: 2, category: "Household items", imageName: "household_items", expense: 342),
-        Record(id: 3, category: "Utilities", imageName: "utility", expense: 3000),
-        Record(id: 4, category: "Car", imageName: "car", expense: 3098),
-        Record(id: 5, category: "Gardening", imageName: "gardening", expense: 6098)
+        Record2(id: 1, category: "Food", imageName: "food", expense: 43098),
+        Record2(id: 2, category: "Household items", imageName: "household_items", expense: 342),
+        Record2(id: 3, category: "Utilities", imageName: "utility", expense: 3000),
+        Record2(id: 4, category: "Car", imageName: "car", expense: 3098),
+        Record2(id: 5, category: "Gardening", imageName: "gardening", expense: 6098)
     ]
     let records_9 = [
-        Record(id: 1, category: "Food", imageName: "food", expense: 50098),
-        Record(id: 2, category: "Household items", imageName: "household_items", expense: 2343),
-        Record(id: 3, category: "Utilities", imageName: "utility", expense: 52342),
-        Record(id: 4, category: "Car", imageName: "car", expense: 3098),
-        Record(id: 5, category: "Gardening", imageName: "gardening", expense: 253)
+        Record2(id: 1, category: "Food", imageName: "food", expense: 50098),
+        Record2(id: 2, category: "Household items", imageName: "household_items", expense: 2343),
+        Record2(id: 3, category: "Utilities", imageName: "utility", expense: 52342),
+        Record2(id: 4, category: "Car", imageName: "car", expense: 3098),
+        Record2(id: 5, category: "Gardening", imageName: "gardening", expense: 253)
     ]
     
     init() {
@@ -47,6 +48,11 @@ struct ReportView: View {
     
     var body: some View {
         VStack {
+            let realm = try! Realm()
+            let tests = realm.objects(Record.self)
+            if tests.count > 0 {
+                Text(tests[0].category?.main ?? "nothing")
+            }
             MonthYearPicker(currentYearMonth: $currentYearMonth)
             Text("\(unit) \(records[currentYearMonth].totalExpenseAmount())")
                 .padding()
