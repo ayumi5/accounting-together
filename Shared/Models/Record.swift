@@ -16,6 +16,7 @@ class Record: Object {
     @Persisted var payingAccount: Account?
     @Persisted var isReimbursed: Bool = false
     @Persisted var whoReimburse: Account?
+    @Persisted var note: String = ""
     
     
     convenience init(price: Int, date: Date, category: Category, payingAccount: Account, isReimbursed: Bool, whoReimnurse: Account?) {
