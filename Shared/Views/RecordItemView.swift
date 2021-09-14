@@ -15,7 +15,10 @@ struct RecordItemView: View {
     @State private var category = ""
     @State private var paidBy = ""
     @State private var showAlert = false
-
+    private let accounts = [Account(id: 1, name: "Jasper"), Account(id: 2, name: "Ayumi")]
+    @State private var selectedAccount: Account = Account(id: 1, name: "Jasper")
+    private let categories = [Category(main: "Food", sub: ""), Category(main: "Household items", sub: ""), Category(main: "Gift", sub: ""), Category(main: "Utilities", sub: "")]
+    @State private var selectedCategory: Category = Category(main: "Food", sub: "")
     private var intFormatter: Formatter = NumberFormatter()
     
     var body: some View {
@@ -25,22 +28,24 @@ struct RecordItemView: View {
                 TextField("10,000", value: $price, formatter: intFormatter)
                     // TODO: how to add toolbar?
 //                    .keyboardType(.decimalPad)
-            }
+            }.padding()
             HStack {
                 DatePicker("Date", selection: $selectedDate, displayedComponents: .date)
-            }
+            }.padding()
             HStack {
-                Text("Category")
-                Spacer()
-                TextField("Food", text: $category)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-            }
+                Picker("Category", selection: $selectedCategory) {
+                    ForEach(categories, id: \.self) { category in
+                        Text(category.main)
+                    }
+                }
+            }.padding()
             HStack {
-                Text("Paid by")
-                Spacer()
-                TextField("Jasper", text: $paidBy)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-            }
+                Picker("Paid by", selection: $selectedAccount) {
+                    ForEach(accounts, id: \.self) { account in
+                        Text(account.name)
+                    }
+                }
+            }.padding()
             Button(action: {
                 let realm = try! Realm()
                 let record = Record(price: price ?? 0, date: selectedDate, category: Category(main: category, sub: ""), payingAccount: Account(id: 1, name: paidBy), isReimbursed: false, whoReimnurse: nil)
