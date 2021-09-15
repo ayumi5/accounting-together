@@ -7,10 +7,11 @@
 
 import Foundation
 import RealmSwift
+import SwiftUI
 
-class Record: Object {
+class Record: Object, Identifiable {
     @Persisted(primaryKey: true) var _id: ObjectId
-    @Persisted var price: Int
+    @Persisted var expense: Int
     @Persisted var date: Date
     @Persisted var category: Category?
     @Persisted var payingAccount: Account?
@@ -18,14 +19,33 @@ class Record: Object {
     @Persisted var whoReimburse: Account?
     @Persisted var note: String = ""
     
+    private static var realm = try! Realm()
+    
+    var image: Image {
+        Image(category!.mainImageName)
+    }
     
     convenience init(price: Int, date: Date, category: Category, payingAccount: Account, isReimbursed: Bool, whoReimnurse: Account?) {
         self.init()
-        self.price = price
+        self.expense = price
         self.date = date
         self.category = category
         self.payingAccount = payingAccount
         self.isReimbursed = isReimbursed
         self.whoReimburse = whoReimburse
+    }
+}
+
+extension Array where Element == Record {
+    func totalExpenseAmount() -> Int {
+        var total: Int = 0
+        _ = self.map { total+=$0.expense }
+        return total
+    }
+}
+
+extension Results where Element == Record {
+    func filterBy(date: Date) -> Results<Record> {
+        return self.filter("date > %@ && date < %@", date.startOfMonth(), date.endOfMonth())
     }
 }

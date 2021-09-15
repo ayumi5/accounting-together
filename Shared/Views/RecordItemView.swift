@@ -17,8 +17,8 @@ struct RecordItemView: View {
     @State private var showAlert = false
     private let accounts = [Account(id: 1, name: "Jasper"), Account(id: 2, name: "Ayumi")]
     @State private var selectedAccount: Account = Account(id: 1, name: "Jasper")
-    private let categories = [Category(main: "Food", sub: ""), Category(main: "Household items", sub: ""), Category(main: "Gift", sub: ""), Category(main: "Utilities", sub: "")]
-    @State private var selectedCategory: Category = Category(main: "Food", sub: "")
+    private let categories = [Category(main: "Food", mainImageName: "food", sub: ""), Category(main: "Household items", mainImageName: "household_items", sub: ""), Category(main: "Gift", mainImageName: "gift", sub: ""), Category(main: "Utilities", mainImageName: "utility", sub: "")]
+    @State private var selectedCategory: Category = Category(main: "Food", mainImageName: "food", sub: "")
     private var intFormatter: Formatter = NumberFormatter()
     
     var body: some View {
@@ -48,8 +48,8 @@ struct RecordItemView: View {
             }.padding()
             Button(action: {
                 let realm = try! Realm()
-                let record = Record(price: price ?? 0, date: selectedDate, category: Category(main: category, sub: ""), payingAccount: Account(id: 1, name: paidBy), isReimbursed: false, whoReimnurse: nil)
-                if record.price == 0 {
+                let record = Record(price: price ?? 0, date: selectedDate, category: selectedCategory, payingAccount: selectedAccount, isReimbursed: false, whoReimnurse: nil)
+                if record.expense == 0 {
                     showAlert = true
                 } else {
                     try! realm.write {
@@ -58,6 +58,8 @@ struct RecordItemView: View {
                     price = nil
                     selectedDate = Date()
                     category = ""
+                    selectedCategory = Category(main: "Food", mainImageName: "food", sub: "")
+                    selectedAccount = Account(id: 1, name: "Jasper")
                     paidBy = ""
                     showAlert = false
                 }
@@ -65,7 +67,7 @@ struct RecordItemView: View {
                 Text("OK")
             }.alert(isPresented: self.$showAlert) {
                 Alert(title: Text("Error"), message: Text("Please enter price!"), dismissButton: .default(Text("OK")))
-            }
+            }.padding()
         }
     }
 }

@@ -10,11 +10,13 @@ import RealmSwift
 
 class Category: EmbeddedObject {
     @Persisted var main: String = ""
+    @Persisted var mainImageName: String = ""
     @Persisted var sub: String = ""
     
-    convenience init(main: String, sub: String) {
+    convenience init(main: String, mainImageName: String, sub: String) {
         self.init()
         self.main = main
+        self.mainImageName = mainImageName
         self.sub = sub
     }
 }

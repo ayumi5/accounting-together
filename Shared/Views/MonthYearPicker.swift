@@ -18,7 +18,7 @@ struct MonthYearPicker: View {
         HStack {
             Button(action: {
                 // to previous month
-                if currnetYearMonth > 0 {
+                if currnetYearMonth > 1 {
                     currnetYearMonth -= 1
                 }
             }) {
@@ -26,12 +26,12 @@ struct MonthYearPicker: View {
                     .padding()
             }
             Spacer()
-            Text("2021 / \(currnetYearMonth+7)")// TODO: fixed value for now
+            Text("2021 / \(currnetYearMonth)")// TODO: fixed value for now
                 .font(.title)
             Spacer()
             Button(action: {
                 // to next month
-                if currnetYearMonth < 2 {
+                if currnetYearMonth < 12 {
                     currnetYearMonth += 1
                 }
             }) {

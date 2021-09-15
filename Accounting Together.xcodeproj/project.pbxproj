@@ -47,6 +47,10 @@
 		3771394226E6FEE600751DD5 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3771394026E6FEE600751DD5 /* Record.swift */; };
 		37A7549C26E74798001427C4 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A7549B26E74798001427C4 /* Category.swift */; };
 		37A7549D26E74798001427C4 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A7549B26E74798001427C4 /* Category.swift */; };
+		37E0686026F09EAB00F012C4 /* Date+Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E0685F26F09EAB00F012C4 /* Date+Calendar.swift */; };
+		37E0686126F09EAB00F012C4 /* Date+Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E0685F26F09EAB00F012C4 /* Date+Calendar.swift */; };
+		37E0686426F0A4B600F012C4 /* UtilDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E0686326F0A4B600F012C4 /* UtilDate.swift */; };
+		37E0686526F0A4B600F012C4 /* UtilDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E0686326F0A4B600F012C4 /* UtilDate.swift */; };
 		3F02556DB75C94314200706C /* Pods_Accounting_Together__macOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C46AABB82E9DD78E2E11433B /* Pods_Accounting_Together__macOS_.framework */; };
 		A1E5004CA2A315F7F45CEA07 /* Pods_Accounting_Together__iOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D41D52D6407747C23961140 /* Pods_Accounting_Together__iOS_.framework */; };
 /* End PBXBuildFile section */
@@ -100,6 +104,8 @@
 		3754F92326E0A7F500ED1FC4 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		3771394026E6FEE600751DD5 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		37A7549B26E74798001427C4 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		37E0685F26F09EAB00F012C4 /* Date+Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Calendar.swift"; sourceTree = "<group>"; };
+		37E0686326F0A4B600F012C4 /* UtilDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilDate.swift; sourceTree = "<group>"; };
 		38E90B30A3359B1D52521B93 /* Pods-Accounting Together (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Accounting Together (macOS).debug.xcconfig"; path = "Target Support Files/Pods-Accounting Together (macOS)/Pods-Accounting Together (macOS).debug.xcconfig"; sourceTree = "<group>"; };
 		5D41D52D6407747C23961140 /* Pods_Accounting_Together__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Accounting_Together__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81CF079048D50961DF7E8D01 /* Pods-Accounting Together (macOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Accounting Together (macOS).release.xcconfig"; path = "Target Support Files/Pods-Accounting Together (macOS)/Pods-Accounting Together (macOS).release.xcconfig"; sourceTree = "<group>"; };
@@ -158,6 +164,7 @@
 		3744376626DB355800418450 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				37E0686226F0A4A800F012C4 /* Utils */,
 				3754F91F26E06EA600ED1FC4 /* Extensions */,
 				3752A53B26DB794D00382F71 /* Views */,
 				3744376926DB355800418450 /* Accounting_TogetherApp.swift */,
@@ -247,8 +254,17 @@
 			children = (
 				3754F92026E06EC200ED1FC4 /* UIScreen+Size.swift */,
 				3744305526EC4F8100CFDF2E /* UITextField+Toolbar.swift */,
+				37E0685F26F09EAB00F012C4 /* Date+Calendar.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		37E0686226F0A4A800F012C4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				37E0686326F0A4B600F012C4 /* UtilDate.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		585DAD6CD216BC345E902184 /* Pods */ = {
@@ -505,11 +521,13 @@
 				3744379326DB356000418450 /* Accounting_Together.xcdatamodeld in Sources */,
 				3752A55026DC7ABF00382F71 /* Account.swift in Sources */,
 				3752A54D26DC793300382F71 /* Record2.swift in Sources */,
+				37E0686026F09EAB00F012C4 /* Date+Calendar.swift in Sources */,
 				3771394126E6FEE600751DD5 /* Record.swift in Sources */,
 				3752A54626DB8FC300382F71 /* PieChart.swift in Sources */,
 				3744305626EC4F8100CFDF2E /* UITextField+Toolbar.swift in Sources */,
 				3752A53D26DB796E00382F71 /* ReportView.swift in Sources */,
 				3754F92426E0A7F500ED1FC4 /* SettingsView.swift in Sources */,
+				37E0686426F0A4B600F012C4 /* UtilDate.swift in Sources */,
 				3754F92126E06EC200ED1FC4 /* UIScreen+Size.swift in Sources */,
 				3744379726DB356000418450 /* ContentView.swift in Sources */,
 				3744305326EC4A6800CFDF2E /* CustomInputTextField.swift in Sources */,
@@ -529,11 +547,13 @@
 				3744379426DB356000418450 /* Accounting_Together.xcdatamodeld in Sources */,
 				3752A55126DC7ABF00382F71 /* Account.swift in Sources */,
 				3752A54E26DC793300382F71 /* Record2.swift in Sources */,
+				37E0686126F09EAB00F012C4 /* Date+Calendar.swift in Sources */,
 				3771394226E6FEE600751DD5 /* Record.swift in Sources */,
 				3752A54726DB8FC300382F71 /* PieChart.swift in Sources */,
 				3744305726EC4F8100CFDF2E /* UITextField+Toolbar.swift in Sources */,
 				3752A53E26DB796E00382F71 /* ReportView.swift in Sources */,
 				3754F92526E0A7F500ED1FC4 /* SettingsView.swift in Sources */,
+				37E0686526F0A4B600F012C4 /* UtilDate.swift in Sources */,
 				3754F92226E06EC200ED1FC4 /* UIScreen+Size.swift in Sources */,
 				3744379826DB356000418450 /* ContentView.swift in Sources */,
 				3744305426EC4A6800CFDF2E /* CustomInputTextField.swift in Sources */,
