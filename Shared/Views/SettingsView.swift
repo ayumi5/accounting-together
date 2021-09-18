@@ -10,8 +10,16 @@ import SwiftUI
 struct SettingsView: View {
     var body: some View {
         List {
-            Text("Account")
-            Text("Category")
+            NavigationLink(
+                destination: AccountView(),
+                label: {
+                    Text("Account")
+                })
+            NavigationLink(
+                destination: CategoryView(),
+                label: {
+                    Text("Category")
+                })
         }
     }
 }

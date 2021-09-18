@@ -7,8 +7,12 @@
 
 import SwiftUI
 import CoreData
+import RealmSwift
 
 struct ContentView: View {
+    @ObservedResults(Category.self) var categories
+    @ObservedResults(Account.self) var accounts
+    
     var body: some View {
         NavigationView {
             TabView {
@@ -20,7 +24,7 @@ struct ContentView: View {
                         }
                     }
                     .tag(1)
-                RecordItemView()
+                RecordView(currentCategory: categories.first!, currentAccount: accounts.first!)
                     .tabItem {
                         VStack {
                             Image(systemName: "pencil")
@@ -50,6 +54,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        ContentView()
     }
 }

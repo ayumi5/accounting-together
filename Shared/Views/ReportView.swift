@@ -14,11 +14,13 @@ struct ReportView: View {
     private let unit: String = "¥"
     private let listHeight:CGFloat = 0.25
     @ObservedResults(Record.self) var records
-    
-    
+    var account = Account(name: "")
+    private let realm = Realm.myRealm
+        
     var body: some View {
         let filteredRecords = Array(records.filterBy(date: Month.init(rawValue: currentYearMonth)!.firstDay))
-        VStack {
+        let categories = realm.objects(Category.self)
+        return VStack {
             MonthYearPicker(currentYearMonth: $currentYearMonth)
             Text("\(unit) \(filteredRecords.totalExpenseAmount())")
                 .padding()
@@ -26,15 +28,18 @@ struct ReportView: View {
             Spacer()
             PieChart(records: filteredRecords)
             Spacer()
-            List(filteredRecords, id: \.self) { record in
-                HStack {
-                    record.image
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 25)
-                    Text(record.category!.main)
-                    Spacer()
-                    Text("\(unit) \(record.expense)")
+            List(categories, id: \.self) { category in
+                let categoryRecords = category.records.filterBy(date: Month.init(rawValue: currentYearMonth)!.firstDay)
+                if categoryRecords.count > 0 {
+                    HStack {
+                        category.mainImage
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 25)
+                        Text(category.main)
+                        Spacer()
+                        Text(unit + "\(Array(categoryRecords).totalExpenseAmount())")
+                    }
                 }
             }
             .frame(height: UIScreen.height*listHeight)
@@ -61,8 +66,8 @@ struct ReportView: View {
     }
 }
 
-struct ReportView_Previews: PreviewProvider {
-    static var previews: some View {
-        ReportView()
-    }
-}
+//struct ReportView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ReportView(recordss: [])
+//    }
+//}

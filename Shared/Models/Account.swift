@@ -9,13 +9,19 @@ import Foundation
 import SwiftUI
 import RealmSwift
 
-class Account: EmbeddedObject {
-    @Persisted var id: Int
-    @Persisted var name: String
+class Account: Object, ObjectKeyIdentifiable {
+    @Persisted(primaryKey: true) var _id: ObjectId
+    @Persisted var name: String = ""
+    @Persisted var imageName: String = ""
+    @Persisted var records = RealmSwift.List<Record>()
     
-    convenience init(id: Int, name: String) {
+    var image: Image {
+        Image(systemName: imageName)
+    }
+    
+    convenience init(name: String) {
         self.init()
-        self.id = id
         self.name = name
+        self.imageName = "person"
     }
 }

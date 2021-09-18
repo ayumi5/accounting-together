@@ -6,15 +6,18 @@
 //
 
 import SwiftUI
+import Foundation
+import RealmSwift
 
 @main
-struct Accounting_TogetherApp: App {
-    let persistenceController = PersistenceController.shared
-
+struct Accounting_TogetherApp: SwiftUI.App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    
     var body: some Scene {
-        WindowGroup {
+        return WindowGroup {
             ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environment(\.realmConfiguration, Realm.myConfiguration)
         }
     }
+    
 }

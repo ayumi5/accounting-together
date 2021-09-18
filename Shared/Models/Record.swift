@@ -9,28 +9,28 @@ import Foundation
 import RealmSwift
 import SwiftUI
 
-class Record: Object, Identifiable {
+class Record: Object, ObjectKeyIdentifiable {
     @Persisted(primaryKey: true) var _id: ObjectId
     @Persisted var expense: Int
     @Persisted var date: Date
-    @Persisted var category: Category?
-    @Persisted var payingAccount: Account?
     @Persisted var isReimbursed: Bool = false
     @Persisted var whoReimburse: Account?
     @Persisted var note: String = ""
+    @Persisted(originProperty: "records") var linkedCategory: LinkingObjects<Category>
+    @Persisted(originProperty: "records") var linkedAccount: LinkingObjects<Account>
     
-    private static var realm = try! Realm()
-    
-    var image: Image {
-        Image(category!.mainImageName)
+    var category: Category {
+        linkedCategory.first!
     }
     
-    convenience init(price: Int, date: Date, category: Category, payingAccount: Account, isReimbursed: Bool, whoReimnurse: Account?) {
+    var payingAccount: Account {
+        linkedAccount.first!
+    }
+    
+    convenience init(price: Int, date: Date, isReimbursed: Bool, whoReimnurse: Account?) {
         self.init()
         self.expense = price
         self.date = date
-        self.category = category
-        self.payingAccount = payingAccount
         self.isReimbursed = isReimbursed
         self.whoReimburse = whoReimburse
     }
@@ -45,6 +45,12 @@ extension Array where Element == Record {
 }
 
 extension Results where Element == Record {
+    func filterBy(date: Date) -> Results<Record> {
+        return self.filter("date > %@ && date < %@", date.startOfMonth(), date.endOfMonth())
+    }
+}
+
+extension RealmSwift.List where Element == Record {
     func filterBy(date: Date) -> Results<Record> {
         return self.filter("date > %@ && date < %@", date.startOfMonth(), date.endOfMonth())
     }

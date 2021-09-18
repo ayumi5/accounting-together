@@ -29,14 +29,10 @@
 		3744379C26DB356000418450 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3744376C26DB356000418450 /* Assets.xcassets */; };
 		3752A53D26DB796E00382F71 /* ReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3752A53C26DB796E00382F71 /* ReportView.swift */; };
 		3752A53E26DB796E00382F71 /* ReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3752A53C26DB796E00382F71 /* ReportView.swift */; };
-		3752A54026DB7BEF00382F71 /* RecordItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3752A53F26DB7BEF00382F71 /* RecordItemView.swift */; };
-		3752A54126DB7BEF00382F71 /* RecordItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3752A53F26DB7BEF00382F71 /* RecordItemView.swift */; };
 		3752A54326DB872D00382F71 /* MonthYearPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3752A54226DB872D00382F71 /* MonthYearPicker.swift */; };
 		3752A54426DB872D00382F71 /* MonthYearPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3752A54226DB872D00382F71 /* MonthYearPicker.swift */; };
 		3752A54626DB8FC300382F71 /* PieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3752A54526DB8FC300382F71 /* PieChart.swift */; };
 		3752A54726DB8FC300382F71 /* PieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3752A54526DB8FC300382F71 /* PieChart.swift */; };
-		3752A54D26DC793300382F71 /* Record2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3752A54C26DC793300382F71 /* Record2.swift */; };
-		3752A54E26DC793300382F71 /* Record2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3752A54C26DC793300382F71 /* Record2.swift */; };
 		3752A55026DC7ABF00382F71 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3752A54F26DC7ABF00382F71 /* Account.swift */; };
 		3752A55126DC7ABF00382F71 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3752A54F26DC7ABF00382F71 /* Account.swift */; };
 		3754F92126E06EC200ED1FC4 /* UIScreen+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3754F92026E06EC200ED1FC4 /* UIScreen+Size.swift */; };
@@ -47,10 +43,20 @@
 		3771394226E6FEE600751DD5 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3771394026E6FEE600751DD5 /* Record.swift */; };
 		37A7549C26E74798001427C4 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A7549B26E74798001427C4 /* Category.swift */; };
 		37A7549D26E74798001427C4 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A7549B26E74798001427C4 /* Category.swift */; };
+		37AE09E226F2E49F0016EF35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AE09E126F2E49F0016EF35 /* AppDelegate.swift */; };
+		37AE09E326F2E49F0016EF35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AE09E126F2E49F0016EF35 /* AppDelegate.swift */; };
+		37AE09E526F2F4170016EF35 /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AE09E426F2F4170016EF35 /* RecordView.swift */; };
+		37AE09E626F2F4170016EF35 /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AE09E426F2F4170016EF35 /* RecordView.swift */; };
+		37DCA4B126F586C9000BE027 /* Realm+Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DCA4B026F586C9000BE027 /* Realm+Config.swift */; };
+		37DCA4B226F586C9000BE027 /* Realm+Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DCA4B026F586C9000BE027 /* Realm+Config.swift */; };
 		37E0686026F09EAB00F012C4 /* Date+Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E0685F26F09EAB00F012C4 /* Date+Calendar.swift */; };
 		37E0686126F09EAB00F012C4 /* Date+Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E0685F26F09EAB00F012C4 /* Date+Calendar.swift */; };
 		37E0686426F0A4B600F012C4 /* UtilDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E0686326F0A4B600F012C4 /* UtilDate.swift */; };
 		37E0686526F0A4B600F012C4 /* UtilDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E0686326F0A4B600F012C4 /* UtilDate.swift */; };
+		37E0686726F1899100F012C4 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E0686626F1899100F012C4 /* AccountView.swift */; };
+		37E0686826F1899100F012C4 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E0686626F1899100F012C4 /* AccountView.swift */; };
+		37E0686A26F189D500F012C4 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E0686926F189D500F012C4 /* CategoryView.swift */; };
+		37E0686B26F189D500F012C4 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E0686926F189D500F012C4 /* CategoryView.swift */; };
 		3F02556DB75C94314200706C /* Pods_Accounting_Together__macOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C46AABB82E9DD78E2E11433B /* Pods_Accounting_Together__macOS_.framework */; };
 		A1E5004CA2A315F7F45CEA07 /* Pods_Accounting_Together__iOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D41D52D6407747C23961140 /* Pods_Accounting_Together__iOS_.framework */; };
 /* End PBXBuildFile section */
@@ -95,17 +101,20 @@
 		3744379026DB356000418450 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		3744379226DB356000418450 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3752A53C26DB796E00382F71 /* ReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportView.swift; sourceTree = "<group>"; };
-		3752A53F26DB7BEF00382F71 /* RecordItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordItemView.swift; sourceTree = "<group>"; };
 		3752A54226DB872D00382F71 /* MonthYearPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthYearPicker.swift; sourceTree = "<group>"; };
 		3752A54526DB8FC300382F71 /* PieChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChart.swift; sourceTree = "<group>"; };
-		3752A54C26DC793300382F71 /* Record2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record2.swift; sourceTree = "<group>"; };
 		3752A54F26DC7ABF00382F71 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		3754F92026E06EC200ED1FC4 /* UIScreen+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Size.swift"; sourceTree = "<group>"; };
 		3754F92326E0A7F500ED1FC4 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		3771394026E6FEE600751DD5 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		37A7549B26E74798001427C4 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		37AE09E126F2E49F0016EF35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		37AE09E426F2F4170016EF35 /* RecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
+		37DCA4B026F586C9000BE027 /* Realm+Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Realm+Config.swift"; sourceTree = "<group>"; };
 		37E0685F26F09EAB00F012C4 /* Date+Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Calendar.swift"; sourceTree = "<group>"; };
 		37E0686326F0A4B600F012C4 /* UtilDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilDate.swift; sourceTree = "<group>"; };
+		37E0686626F1899100F012C4 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		37E0686926F189D500F012C4 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		38E90B30A3359B1D52521B93 /* Pods-Accounting Together (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Accounting Together (macOS).debug.xcconfig"; path = "Target Support Files/Pods-Accounting Together (macOS)/Pods-Accounting Together (macOS).debug.xcconfig"; sourceTree = "<group>"; };
 		5D41D52D6407747C23961140 /* Pods_Accounting_Together__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Accounting_Together__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81CF079048D50961DF7E8D01 /* Pods-Accounting Together (macOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Accounting Together (macOS).release.xcconfig"; path = "Target Support Files/Pods-Accounting Together (macOS)/Pods-Accounting Together (macOS).release.xcconfig"; sourceTree = "<group>"; };
@@ -173,6 +182,7 @@
 				372247F726E0C6320084D324 /* Color.xcassets */,
 				3744376726DB355800418450 /* Accounting_Together.xcdatamodeld */,
 				3752A54B26DC761100382F71 /* Models */,
+				37AE09E126F2E49F0016EF35 /* AppDelegate.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -228,12 +238,14 @@
 			children = (
 				3744376A26DB355800418450 /* ContentView.swift */,
 				3752A54226DB872D00382F71 /* MonthYearPicker.swift */,
-				3752A53F26DB7BEF00382F71 /* RecordItemView.swift */,
 				3752A53C26DB796E00382F71 /* ReportView.swift */,
 				3752A54526DB8FC300382F71 /* PieChart.swift */,
 				3754F92326E0A7F500ED1FC4 /* SettingsView.swift */,
 				3744305226EC4A6800CFDF2E /* CustomInputTextField.swift */,
 				3744305826EC557400CFDF2E /* AnyGestureRecognizer.swift */,
+				37E0686626F1899100F012C4 /* AccountView.swift */,
+				37E0686926F189D500F012C4 /* CategoryView.swift */,
+				37AE09E426F2F4170016EF35 /* RecordView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -242,7 +254,6 @@
 			isa = PBXGroup;
 			children = (
 				37A7549B26E74798001427C4 /* Category.swift */,
-				3752A54C26DC793300382F71 /* Record2.swift */,
 				3752A54F26DC7ABF00382F71 /* Account.swift */,
 				3771394026E6FEE600751DD5 /* Record.swift */,
 			);
@@ -255,6 +266,7 @@
 				3754F92026E06EC200ED1FC4 /* UIScreen+Size.swift */,
 				3744305526EC4F8100CFDF2E /* UITextField+Toolbar.swift */,
 				37E0685F26F09EAB00F012C4 /* Date+Calendar.swift */,
+				37DCA4B026F586C9000BE027 /* Realm+Config.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -513,14 +525,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3752A54026DB7BEF00382F71 /* RecordItemView.swift in Sources */,
+				37AE09E226F2E49F0016EF35 /* AppDelegate.swift in Sources */,
+				37DCA4B126F586C9000BE027 /* Realm+Config.swift in Sources */,
 				3744305926EC557400CFDF2E /* AnyGestureRecognizer.swift in Sources */,
 				3752A54326DB872D00382F71 /* MonthYearPicker.swift in Sources */,
 				3744379526DB356000418450 /* Accounting_TogetherApp.swift in Sources */,
+				37E0686726F1899100F012C4 /* AccountView.swift in Sources */,
 				3744379926DB356000418450 /* Persistence.swift in Sources */,
+				37AE09E526F2F4170016EF35 /* RecordView.swift in Sources */,
 				3744379326DB356000418450 /* Accounting_Together.xcdatamodeld in Sources */,
 				3752A55026DC7ABF00382F71 /* Account.swift in Sources */,
-				3752A54D26DC793300382F71 /* Record2.swift in Sources */,
+				37E0686A26F189D500F012C4 /* CategoryView.swift in Sources */,
 				37E0686026F09EAB00F012C4 /* Date+Calendar.swift in Sources */,
 				3771394126E6FEE600751DD5 /* Record.swift in Sources */,
 				3752A54626DB8FC300382F71 /* PieChart.swift in Sources */,
@@ -539,14 +554,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3752A54126DB7BEF00382F71 /* RecordItemView.swift in Sources */,
+				37AE09E326F2E49F0016EF35 /* AppDelegate.swift in Sources */,
+				37DCA4B226F586C9000BE027 /* Realm+Config.swift in Sources */,
 				3744305A26EC557400CFDF2E /* AnyGestureRecognizer.swift in Sources */,
 				3752A54426DB872D00382F71 /* MonthYearPicker.swift in Sources */,
 				3744379626DB356000418450 /* Accounting_TogetherApp.swift in Sources */,
+				37E0686826F1899100F012C4 /* AccountView.swift in Sources */,
 				3744379A26DB356000418450 /* Persistence.swift in Sources */,
+				37AE09E626F2F4170016EF35 /* RecordView.swift in Sources */,
 				3744379426DB356000418450 /* Accounting_Together.xcdatamodeld in Sources */,
 				3752A55126DC7ABF00382F71 /* Account.swift in Sources */,
-				3752A54E26DC793300382F71 /* Record2.swift in Sources */,
+				37E0686B26F189D500F012C4 /* CategoryView.swift in Sources */,
 				37E0686126F09EAB00F012C4 /* Date+Calendar.swift in Sources */,
 				3771394226E6FEE600751DD5 /* Record.swift in Sources */,
 				3752A54726DB8FC300382F71 /* PieChart.swift in Sources */,

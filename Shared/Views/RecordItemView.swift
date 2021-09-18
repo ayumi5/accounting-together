@@ -10,16 +10,22 @@ import RealmSwift
 
 struct RecordItemView: View {
     @State private var price: Int? = nil
-    @State private var priceStr: String = ""
     @State var selectedDate = Date()
-    @State private var category = ""
-    @State private var paidBy = ""
     @State private var showAlert = false
-    private let accounts = [Account(id: 1, name: "Jasper"), Account(id: 2, name: "Ayumi")]
-    @State private var selectedAccount: Account = Account(id: 1, name: "Jasper")
-    private let categories = [Category(main: "Food", mainImageName: "food", sub: ""), Category(main: "Household items", mainImageName: "household_items", sub: ""), Category(main: "Gift", mainImageName: "gift", sub: ""), Category(main: "Utilities", mainImageName: "utility", sub: "")]
-    @State private var selectedCategory: Category = Category(main: "Food", mainImageName: "food", sub: "")
+    private let accounts = [Account(name: "Jasper"), Account(name: "Ayumi")]
+    @State var selectedAccount: Account = Account(name: "Jasper")
+    @ObservedRealmObject var account: Account  = Account(name: "Jasper")
+//    @ObservedRealmObject var account: Account
+//    @ObservedRealmObject var accounts: RealmSwift.List<Account>
+//    @ObservedRealmObject var selectedCategory: Category
+    @State var selectedCategory: Category
+    
     private var intFormatter: Formatter = NumberFormatter()
+//    private let realm = Realm.myRealm
+    
+    init() {
+        _selectedCategory = State(initialValue: Category(main: "", mainImageName: "", sub: ""))
+    }
     
     var body: some View {
         Form {
@@ -32,13 +38,15 @@ struct RecordItemView: View {
             HStack {
                 DatePicker("Date", selection: $selectedDate, displayedComponents: .date)
             }.padding()
-            HStack {
-                Picker("Category", selection: $selectedCategory) {
-                    ForEach(categories, id: \.self) { category in
-                        Text(category.main)
-                    }
-                }
-            }.padding()
+//            HStack {
+//                Picker("Category", selection: $selectedCategory) {
+//                    ForEach($account.catogories, id: \.self) { category in
+//                        Text(category.main)
+//                    }
+//                }.onAppear {
+//                    selectedCategory = account.catogories.first!
+//                }
+//            }.padding()
             HStack {
                 Picker("Paid by", selection: $selectedAccount) {
                     ForEach(accounts, id: \.self) { account in
@@ -47,22 +55,19 @@ struct RecordItemView: View {
                 }
             }.padding()
             Button(action: {
-                let realm = try! Realm()
-                let record = Record(price: price ?? 0, date: selectedDate, category: selectedCategory, payingAccount: selectedAccount, isReimbursed: false, whoReimnurse: nil)
-                if record.expense == 0 {
-                    showAlert = true
-                } else {
-                    try! realm.write {
-                        realm.add(record)
-                    }
-                    price = nil
-                    selectedDate = Date()
-                    category = ""
-                    selectedCategory = Category(main: "Food", mainImageName: "food", sub: "")
-                    selectedAccount = Account(id: 1, name: "Jasper")
-                    paidBy = ""
-                    showAlert = false
-                }
+//                let realm = Realm.myRealm
+//                let record = Record(price: price ?? 0, date: selectedDate, category: selectedCategory, payingAccount: selectedAccount, isReimbursed: false, whoReimnurse: nil)
+//                if record.expense == 0 {
+//                    showAlert = true
+//                } else {
+//                    try! realm.write {
+//                        realm.add(record)
+//                    }
+//                    price = nil
+//                    selectedDate = Date()
+//                    selectedAccount = Account(name: "Jasper")
+//                    showAlert = false
+//                }
             }) {
                 Text("OK")
             }.alert(isPresented: self.$showAlert) {
