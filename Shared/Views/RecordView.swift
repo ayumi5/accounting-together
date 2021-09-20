@@ -14,7 +14,7 @@ struct RecordView: View {
     @ObservedResults(Account.self) var accounts
     @State var currentCategory: Category
     @State var currentAccount: Account
-    @State private var price: Int = 0
+    @State private var expense: String = ""
     @State private var selectedDate = Date()
     @State private var showAlert = false
     
@@ -22,10 +22,7 @@ struct RecordView: View {
         Form {
             HStack {
                 Text("¥")
-                TextField("10,000", value: $price, formatter: NumberFormatter()
-                )
-                    // TODO: how to add toolbar?
-//                    .keyboardType(.decimalPad)
+                CustomInputTextField.init(placeHolder: "1000", text: $expense, keyboardType: .numberPad)
             }.padding()
             
             HStack {
@@ -49,7 +46,8 @@ struct RecordView: View {
             }.padding()
             
             Button(action: {
-                let record = Record(price: price, date: selectedDate, isReimbursed: false, whoReimnurse: nil)
+                let record = Record(price: Int(expense) ?? 0, date: selectedDate, isReimbursed: false, whoReimnurse: nil)
+                print("price: \(expense)")
                 if record.expense == 0 {
                     showAlert = true
                     // show the alert if no price is entered
@@ -74,7 +72,7 @@ struct RecordView: View {
     
     /// clear data the user entered
     private func clearForm() {
-        price = 0
+        expense = ""
         selectedDate = Date()
         currentCategory = categories.first!
         currentAccount = accounts.first!
