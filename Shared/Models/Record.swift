@@ -43,15 +43,3 @@ extension Array where Element == Record {
         return total
     }
 }
-
-extension Results where Element == Record {
-    func filterBy(date: Date) -> Results<Record> {
-        return self.filter("date > %@ && date < %@", date.startOfMonth(), date.endOfMonth())
-    }
-}
-
-extension RealmSwift.List where Element == Record {
-    func filterBy(date: Date) -> Results<Record> {
-        return self.filter("date > %@ && date < %@", date.startOfMonth(), date.endOfMonth())
-    }
-}

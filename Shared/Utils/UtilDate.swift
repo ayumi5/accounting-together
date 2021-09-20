@@ -27,5 +27,8 @@ enum Month: Int, Identifiable {
         DateComponents(calendar: Date.calendar, year: 2021, month: self.rawValue, day: 1).date!
     }
     
+    var lastDay: Date {
+        firstDay.endOfMonth()
+    }
      
 }

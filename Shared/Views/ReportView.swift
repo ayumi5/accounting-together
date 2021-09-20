@@ -18,18 +18,22 @@ struct ReportView: View {
     private let realm = Realm.myRealm
         
     var body: some View {
-        let filteredRecords = Array(records.filterBy(date: Month.init(rawValue: currentYearMonth)!.firstDay))
-        let categories = realm.objects(Category.self)
+        let selectedMonth = Month.init(rawValue: currentYearMonth)!
+        let datePredicate = NSPredicate("date", fromDate: selectedMonth.firstDay as NSDate, toDate: selectedMonth.lastDay as NSDate)
+        let recordsDatePredicate = NSPredicate("Any records.date", fromDate: selectedMonth.firstDay as NSDate, toDate: selectedMonth.lastDay as NSDate)
+        let filteredRecords = Array(records.filter(datePredicate))
+        let categories = realm.objects(Category.self).filter(recordsDatePredicate)
+        
         return VStack {
             MonthYearPicker(currentYearMonth: $currentYearMonth)
             Text("\(unit) \(filteredRecords.totalExpenseAmount())")
                 .padding()
                 .font(.title)
             Spacer()
-            PieChart(records: filteredRecords)
+            PieChart(totalExpenseAmount: filteredRecords.totalExpenseAmount(), categories: Array(categories), currentYearMonth: $currentYearMonth)
             Spacer()
             List(categories, id: \.self) { category in
-                let categoryRecords = category.records.filterBy(date: Month.init(rawValue: currentYearMonth)!.firstDay)
+                let categoryRecords = category.records.filter(datePredicate)
                 if categoryRecords.count > 0 {
                     HStack {
                         category.mainImage

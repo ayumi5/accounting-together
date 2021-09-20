@@ -9,7 +9,9 @@ import SwiftUI
 import Charts
 
 struct PieChart: UIViewRepresentable {
-    var records = [Record]()
+    var totalExpenseAmount = 0
+    var categories = [Category]()
+    @Binding var currentYearMonth: Int
     
     func makeUIView(context: Context) -> PieChartView {
         let pieChart = PieChartView()
@@ -36,11 +38,12 @@ struct PieChart: UIViewRepresentable {
         dataSet.entryLabelColor = color
         dataSet.valueLineColor = color
         let pFormatter = NumberFormatter()
-        pFormatter.numberStyle = .currency
+        pFormatter.numberStyle = .percent
+        pFormatter.allowsFloats = true
         pFormatter.locale = Locale(identifier: "jp_JP")
         dataSet.valueFormatter = (DefaultValueFormatter(formatter: pFormatter))
         dataSet.xValuePosition = .outsideSlice
-        dataSet.yValuePosition = .outsideSlice
+        dataSet.yValuePosition = .insideSlice
         
         data.addDataSet(dataSet)
         data.setValueTextColor(color)
@@ -50,19 +53,22 @@ struct PieChart: UIViewRepresentable {
     
     private func convertRecordsToEntries() -> [PieChartDataEntry] {
         var entries: [PieChartDataEntry] = []
-        let totalExpense = records.totalExpenseAmount()
-        for record in records {
-            let percent = (Float(record.expense)/Float(totalExpense))*100
-            let entry = PieChartDataEntry(value: Double(record.expense), label: "\(Int(percent.rounded()))%")
+        for category in categories {
+            let selectedMonth = Month.init(rawValue: currentYearMonth)!
+            let datePredicate = NSPredicate.init("date", fromDate: selectedMonth.firstDay as NSDate, toDate: selectedMonth.lastDay as NSDate)
+            let categoryRecords = category.records.filter(datePredicate)
+            let categoryTotal = Array(categoryRecords).totalExpenseAmount()
+            let percent = (Float(categoryTotal)/Float(totalExpenseAmount))
+            let entry = PieChartDataEntry(value: Double(percent), label: category.main)
             entries.append(entry)
         }
-        
         return entries
     }
 }
 
 struct PieChart_Previews: PreviewProvider {
+    @State static var currentYearMonth: Int = 9
     static var previews: some View { 
-        PieChart(records: [])
+        PieChart(currentYearMonth: $currentYearMonth)
     }
 }

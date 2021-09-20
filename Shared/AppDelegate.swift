@@ -13,15 +13,19 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        print("AppDelegate 呼ばれた")
         // make initial account and categories when not exist
         let realm = Realm.myRealm
         let accounts = realm.objects(Account.self)
         let categories = realm.objects(Category.self)
         if accounts.count == 0 {
-            let account = Account(name: "Jasper")
-            try! realm.write {
-                realm.add(account)
+            let initialAccounts = [
+                Account(name: "Jasper"),
+                Account(name: "Ayumi")
+            ]
+            initialAccounts.forEach { account in
+                try! realm.write {
+                    realm.add(account)
+                }
             }
         }
         if categories.count == 0 {
@@ -30,7 +34,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
                 Category(main: "Gift", mainImageName: "Gift", sub: ""),
                 Category(main: "Gardening", mainImageName: "Gardening", sub: ""),
                 Category(main: "Car", mainImageName: "Car", sub: ""),
-                Category(main: "Household items", mainImageName: "Househole_items", sub: "")
+                Category(main: "Household items", mainImageName: "Household_items", sub: "")
             ]
             initialCategories.forEach { category in
                 try! realm.write {

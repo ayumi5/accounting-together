@@ -39,6 +39,8 @@
 		3754F92226E06EC200ED1FC4 /* UIScreen+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3754F92026E06EC200ED1FC4 /* UIScreen+Size.swift */; };
 		3754F92426E0A7F500ED1FC4 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3754F92326E0A7F500ED1FC4 /* SettingsView.swift */; };
 		3754F92526E0A7F500ED1FC4 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3754F92326E0A7F500ED1FC4 /* SettingsView.swift */; };
+		375878B026F8328F006E61EC /* NSPredicate+Initializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375878AF26F8328F006E61EC /* NSPredicate+Initializers.swift */; };
+		375878B126F8328F006E61EC /* NSPredicate+Initializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375878AF26F8328F006E61EC /* NSPredicate+Initializers.swift */; };
 		3771394126E6FEE600751DD5 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3771394026E6FEE600751DD5 /* Record.swift */; };
 		3771394226E6FEE600751DD5 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3771394026E6FEE600751DD5 /* Record.swift */; };
 		37A7549C26E74798001427C4 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A7549B26E74798001427C4 /* Category.swift */; };
@@ -106,6 +108,7 @@
 		3752A54F26DC7ABF00382F71 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		3754F92026E06EC200ED1FC4 /* UIScreen+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Size.swift"; sourceTree = "<group>"; };
 		3754F92326E0A7F500ED1FC4 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		375878AF26F8328F006E61EC /* NSPredicate+Initializers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSPredicate+Initializers.swift"; sourceTree = "<group>"; };
 		3771394026E6FEE600751DD5 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		37A7549B26E74798001427C4 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		37AE09E126F2E49F0016EF35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -267,6 +270,7 @@
 				3744305526EC4F8100CFDF2E /* UITextField+Toolbar.swift */,
 				37E0685F26F09EAB00F012C4 /* Date+Calendar.swift */,
 				37DCA4B026F586C9000BE027 /* Realm+Config.swift */,
+				375878AF26F8328F006E61EC /* NSPredicate+Initializers.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -538,6 +542,7 @@
 				37E0686A26F189D500F012C4 /* CategoryView.swift in Sources */,
 				37E0686026F09EAB00F012C4 /* Date+Calendar.swift in Sources */,
 				3771394126E6FEE600751DD5 /* Record.swift in Sources */,
+				375878B026F8328F006E61EC /* NSPredicate+Initializers.swift in Sources */,
 				3752A54626DB8FC300382F71 /* PieChart.swift in Sources */,
 				3744305626EC4F8100CFDF2E /* UITextField+Toolbar.swift in Sources */,
 				3752A53D26DB796E00382F71 /* ReportView.swift in Sources */,
@@ -567,6 +572,7 @@
 				37E0686B26F189D500F012C4 /* CategoryView.swift in Sources */,
 				37E0686126F09EAB00F012C4 /* Date+Calendar.swift in Sources */,
 				3771394226E6FEE600751DD5 /* Record.swift in Sources */,
+				375878B126F8328F006E61EC /* NSPredicate+Initializers.swift in Sources */,
 				3752A54726DB8FC300382F71 /* PieChart.swift in Sources */,
 				3744305726EC4F8100CFDF2E /* UITextField+Toolbar.swift in Sources */,
 				3752A53E26DB796E00382F71 /* ReportView.swift in Sources */,

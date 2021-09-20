@@ -61,14 +61,6 @@ struct RecordView: View {
                             thawedAccount.records.append(record)
                         }
                     }
-                    print("カテゴリに紐づくレコード: \(currentCategory.records.count)")
-                    print("アカウントに紐づくレコード: \(currentAccount.records.count)")
-                    let records = Realm.myRealm.objects(Record.self)
-                    print("レコードカウント: \(records.count)")
-                    records.forEach { record in
-                        print("レコードの紐づくカテゴリ名 \(record.category.main)")
-                        print("レコードの紐づくアカウント \(record.payingAccount.name)")
-                    }
 
                     clearForm()
                 }
