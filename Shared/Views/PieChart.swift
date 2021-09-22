@@ -16,6 +16,7 @@ struct PieChart: UIViewRepresentable {
     func makeUIView(context: Context) -> PieChartView {
         let pieChart = PieChartView()
         pieChart.data = getData()
+        pieChart.legend.enabled = false
         
         return pieChart
     }
@@ -28,12 +29,7 @@ struct PieChart: UIViewRepresentable {
         let data = PieChartData()
         let entries = convertRecordsToEntries()
         let dataSet = PieChartDataSet(entries: entries)
-        dataSet.colors =
-            ChartColorTemplates.joyful()
-            + ChartColorTemplates.colorful()
-            + ChartColorTemplates.liberty()
-            + ChartColorTemplates.pastel()
-            + ChartColorTemplates.vordiplom()
+        dataSet.colors = categories.map { UIColor($0.mainColor) }
         let color: UIColor = .darkGray
         dataSet.entryLabelColor = color
         dataSet.valueLineColor = color
@@ -42,8 +38,8 @@ struct PieChart: UIViewRepresentable {
         pFormatter.allowsFloats = true
         pFormatter.locale = Locale(identifier: "jp_JP")
         dataSet.valueFormatter = (DefaultValueFormatter(formatter: pFormatter))
-        dataSet.xValuePosition = .outsideSlice
         dataSet.yValuePosition = .insideSlice
+        dataSet.xValuePosition = .insideSlice
         
         data.addDataSet(dataSet)
         data.setValueTextColor(color)
@@ -59,7 +55,9 @@ struct PieChart: UIViewRepresentable {
             let categoryRecords = category.records.filter(datePredicate)
             let categoryTotal = Array(categoryRecords).totalExpenseAmount()
             let percent = (Float(categoryTotal)/Float(totalExpenseAmount))
-            let entry = PieChartDataEntry(value: Double(percent), label: category.main)
+            // display category name only when there's enough space
+            let label = percent > 0.1 ? category.main : ""
+            let entry = PieChartDataEntry(value: Double(percent), label: label)
             entries.append(entry)
         }
         return entries

@@ -26,7 +26,7 @@ struct MonthYearPicker: View {
                     .padding()
             }
             Spacer()
-            Text("2021 / \(currnetYearMonth)")// TODO: fixed value for now
+            Text("2021 / \(currnetYearMonth)")
                 .font(.title)
             Spacer()
             Button(action: {

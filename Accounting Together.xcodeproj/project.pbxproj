@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3721D6F526FAC3290097408C /* Color+hexString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3721D6F426FAC3290097408C /* Color+hexString.swift */; };
+		3721D6F626FAC3290097408C /* Color+hexString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3721D6F426FAC3290097408C /* Color+hexString.swift */; };
 		372247F826E0C6320084D324 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 372247F726E0C6320084D324 /* Color.xcassets */; };
 		372247F926E0C6320084D324 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 372247F726E0C6320084D324 /* Color.xcassets */; };
 		3744305326EC4A6800CFDF2E /* CustomInputTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744305226EC4A6800CFDF2E /* CustomInputTextField.swift */; };
@@ -82,6 +84,7 @@
 
 /* Begin PBXFileReference section */
 		330449A4C02F5DBDA6CBDD16 /* Pods-Accounting Together (iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Accounting Together (iOS).release.xcconfig"; path = "Target Support Files/Pods-Accounting Together (iOS)/Pods-Accounting Together (iOS).release.xcconfig"; sourceTree = "<group>"; };
+		3721D6F426FAC3290097408C /* Color+hexString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+hexString.swift"; sourceTree = "<group>"; };
 		372247F726E0C6320084D324 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		3744305226EC4A6800CFDF2E /* CustomInputTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputTextField.swift; sourceTree = "<group>"; };
 		3744305526EC4F8100CFDF2E /* UITextField+Toolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Toolbar.swift"; sourceTree = "<group>"; };
@@ -271,6 +274,7 @@
 				37E0685F26F09EAB00F012C4 /* Date+Calendar.swift */,
 				37DCA4B026F586C9000BE027 /* Realm+Config.swift */,
 				375878AF26F8328F006E61EC /* NSPredicate+Initializers.swift */,
+				3721D6F426FAC3290097408C /* Color+hexString.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -535,6 +539,7 @@
 				3752A54326DB872D00382F71 /* MonthYearPicker.swift in Sources */,
 				3744379526DB356000418450 /* Accounting_TogetherApp.swift in Sources */,
 				37E0686726F1899100F012C4 /* AccountView.swift in Sources */,
+				3721D6F526FAC3290097408C /* Color+hexString.swift in Sources */,
 				3744379926DB356000418450 /* Persistence.swift in Sources */,
 				37AE09E526F2F4170016EF35 /* RecordView.swift in Sources */,
 				3744379326DB356000418450 /* Accounting_Together.xcdatamodeld in Sources */,
@@ -565,6 +570,7 @@
 				3752A54426DB872D00382F71 /* MonthYearPicker.swift in Sources */,
 				3744379626DB356000418450 /* Accounting_TogetherApp.swift in Sources */,
 				37E0686826F1899100F012C4 /* AccountView.swift in Sources */,
+				3721D6F626FAC3290097408C /* Color+hexString.swift in Sources */,
 				3744379A26DB356000418450 /* Persistence.swift in Sources */,
 				37AE09E626F2F4170016EF35 /* RecordView.swift in Sources */,
 				3744379426DB356000418450 /* Accounting_Together.xcdatamodeld in Sources */,

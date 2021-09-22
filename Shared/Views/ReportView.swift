@@ -14,7 +14,6 @@ struct ReportView: View {
     private let unit: String = "¥"
     private let listHeight:CGFloat = 0.25
     @ObservedResults(Record.self) var records
-    var account = Account(name: "")
     private let realm = Realm.myRealm
         
     var body: some View {
@@ -26,28 +25,38 @@ struct ReportView: View {
         
         return VStack {
             MonthYearPicker(currentYearMonth: $currentYearMonth)
-            Text("\(unit) \(filteredRecords.totalExpenseAmount())")
-                .padding()
-                .font(.title)
-            Spacer()
-            PieChart(totalExpenseAmount: filteredRecords.totalExpenseAmount(), categories: Array(categories), currentYearMonth: $currentYearMonth)
-            Spacer()
-            List(categories, id: \.self) { category in
-                let categoryRecords = category.records.filter(datePredicate)
-                if categoryRecords.count > 0 {
-                    HStack {
-                        category.mainImage
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 25)
-                        Text(category.main)
-                        Spacer()
-                        Text(unit + "\(Array(categoryRecords).totalExpenseAmount())")
+            if filteredRecords.count > 0 {
+                Text("\(unit) \(filteredRecords.totalExpenseAmount())")
+                    .padding()
+                    .font(.title)
+                Spacer()
+                PieChart(totalExpenseAmount: filteredRecords.totalExpenseAmount(), categories: Array(categories), currentYearMonth: $currentYearMonth)
+                    .padding()
+                Spacer()
+                List(categories, id: \.self) { category in
+                    let categoryRecords = category.records.filter(datePredicate)
+                    if categoryRecords.count > 0 {
+                        HStack {
+                            Rectangle()
+                                .fill(category.mainColor)
+                                .frame(width: 25, height: 25)
+                            category.mainImage
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 25)
+                            Text(category.main)
+                            Spacer()
+                            Text(unit + "\(Array(categoryRecords).totalExpenseAmount())")
+                        }
                     }
                 }
+                .frame(height: UIScreen.height*listHeight)
+                .padding()
+            } else {
+                Spacer()
+                Text("No record yet")
+                Spacer()
             }
-            .frame(height: UIScreen.height*listHeight)
-            .padding()
         }.gesture(drag)
     }
     

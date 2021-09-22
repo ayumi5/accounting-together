@@ -13,6 +13,7 @@ class Category: Object, ObjectKeyIdentifiable {
     @Persisted(primaryKey: true) var _id: ObjectId
     @Persisted var main: String = ""
     @Persisted var mainImageName: String = ""
+    @Persisted var mainColorHex: String = ""
     @Persisted var sub: String = ""
     @Persisted var records = RealmSwift.List<Record>()
     
@@ -20,10 +21,15 @@ class Category: Object, ObjectKeyIdentifiable {
         Image(mainImageName)
     }
     
-    convenience init(main: String, mainImageName: String, sub: String) {
+    var mainColor: Color {
+        Color.init(hex: mainColorHex)
+    }
+    
+    convenience init(main: String, mainImageName: String, mainColor: String, sub: String) {
         self.init()
         self.main = main
         self.mainImageName = mainImageName
+        self.mainColorHex = mainColor
         self.sub = sub
     }
 }

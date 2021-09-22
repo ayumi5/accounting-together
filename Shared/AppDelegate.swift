@@ -30,11 +30,12 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         }
         if categories.count == 0 {
             let initialCategories = [
-                Category(main: "Food", mainImageName: "Food", sub: ""),
-                Category(main: "Gift", mainImageName: "Gift", sub: ""),
-                Category(main: "Gardening", mainImageName: "Gardening", sub: ""),
-                Category(main: "Car", mainImageName: "Car", sub: ""),
-                Category(main: "Household items", mainImageName: "Household_items", sub: "")
+                Category(main: "Food", mainImageName: "Food", mainColor: "#D9508AFF", sub: ""),
+                Category(main: "Gift", mainImageName: "Gift", mainColor: "#FE9507FF", sub: ""),
+                Category(main: "Gardening", mainImageName: "Gardening", mainColor: "#FEF778FF", sub: ""),
+                Category(main: "Car", mainImageName: "Car", mainColor: "#6AA786FF", sub: ""),
+                Category(main: "Household items", mainImageName: "Household_items", mainColor: "#35C2D1FF", sub: ""),
+                Category(main: "Utility", mainImageName: "Utility", mainColor: "#405980FF", sub: "")
             ]
             initialCategories.forEach { category in
                 try! realm.write {
