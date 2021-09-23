@@ -53,9 +53,9 @@ struct ReportView: View {
                 .frame(height: UIScreen.height*listHeight)
                 .padding()
             } else {
-                Spacer()
                 Text("No record yet")
-                Spacer()
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(Color.white)
             }
         }.gesture(drag)
     }
@@ -79,8 +79,8 @@ struct ReportView: View {
     }
 }
 
-//struct ReportView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ReportView(recordss: [])
-//    }
-//}
+struct ReportView_Previews: PreviewProvider {
+    static var previews: some View {
+        ReportView()
+    }
+}

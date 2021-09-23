@@ -26,18 +26,28 @@ struct RecordView: View {
             }.padding()
             
             HStack {
+                Image(systemName: "calendar")
                 DatePicker("Date", selection: $selectedDate, displayedComponents: .date)
+                    .labelsHidden()
+                    .frame(maxWidth: .infinity, alignment: .trailing)
+                
             }.padding()
             
             HStack {
-                Picker("Category", selection: $currentCategory) {
+                currentCategory.mainImage
+                    .resizable()
+                    .frame(width: 20, height: 20)
+                Picker("", selection: $currentCategory) {
                     ForEach(categories, id: \.self) { category in
-                        Text(category.main)
+                        HStack {
+                            Text(category.main)
+                        }
                     }
-                }
+                }.labelsHidden()
             }.padding()
             
             HStack {
+                Image(systemName: "person.circle")
                 Picker("Paid by", selection: $currentAccount) {
                     ForEach(accounts, id:\.self) { account in
                         Text(account.name)

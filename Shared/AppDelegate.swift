@@ -35,7 +35,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
                 Category(main: "Gardening", mainImageName: "Gardening", mainColor: "#FEF778FF", sub: ""),
                 Category(main: "Car", mainImageName: "Car", mainColor: "#6AA786FF", sub: ""),
                 Category(main: "Household items", mainImageName: "Household_items", mainColor: "#35C2D1FF", sub: ""),
-                Category(main: "Utility", mainImageName: "Utility", mainColor: "#405980FF", sub: "")
+                Category(main: "Utility", mainImageName: "Utility", mainColor: "#D9B8A2FF", sub: "")
             ]
             initialCategories.forEach { category in
                 try! realm.write {
