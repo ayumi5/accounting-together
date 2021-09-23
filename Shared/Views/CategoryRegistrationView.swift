@@ -1,5 +1,5 @@
 //
-//  CategoryView.swift
+//  CategoryRegistrationView.swift
 //  Accounting Together
 //
 //  Created by Ayumi Udaka on 2021/09/15.
@@ -8,7 +8,7 @@
 import SwiftUI
 import RealmSwift
 
-struct CategoryView: View {
+struct CategoryRegistrationView: View {
     private let realm = Realm.myRealm
     @State private var showingTextField = false
     @State private var newCategory: String = ""
@@ -40,8 +40,8 @@ struct CategoryView: View {
     }
 }
 
-struct CategoryView_Previews: PreviewProvider {
+struct CategoryRegistrationView_Previews: PreviewProvider {
     static var previews: some View {
-        CategoryView()
+        CategoryRegistrationView()
     }
 }

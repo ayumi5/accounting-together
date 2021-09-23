@@ -12,9 +12,10 @@ struct ReportView: View {
     @State private var currentYearMonth: Int = Date.calendar.component(.month, from: Date())
     
     private let unit: String = "¥"
-    private let listHeight:CGFloat = 0.25
+    private let listHeight:CGFloat = 0.3
     @ObservedResults(Record.self) var records
     private let realm = Realm.myRealm
+    @State private var showRecord = (category: "", shown: false)
         
     var body: some View {
         let selectedMonth = Month.init(rawValue: currentYearMonth)!
@@ -34,21 +35,26 @@ struct ReportView: View {
                     .padding()
                 Spacer()
                 List(categories, id: \.self) { category in
-                    let categoryRecords = category.records.filter(datePredicate)
-                    if categoryRecords.count > 0 {
-                        HStack {
-                            Rectangle()
-                                .fill(category.mainColor)
-                                .frame(width: 25, height: 25)
-                            category.mainImage
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 25)
-                            Text(category.main)
-                            Spacer()
-                            Text(unit + "\(Array(categoryRecords).totalExpenseAmount())")
+                    Section(header: CategoryListItemView(category: category, selectedMonth: selectedMonth, showRecord: $showRecord)) {
+                        let categoryRecords = category.records.filter(datePredicate).sorted(byKeyPath: "date", ascending: false)
+                        if categoryRecords.count > 0 {
+                            if showRecord.category == category.main && showRecord.shown {
+                                ForEach(categoryRecords) { record in
+                                    return HStack {
+                                        Text(UtilDate.convertDateToString(record.date, in: "MM/dd HH:mm"))
+                                        Text(record.note)
+                                        Spacer()
+                                        Text("¥" + String(record.expense))
+                                    }
+                                }
+                            }
                         }
                     }
+                    .background(Color.white)
+                    .listRowInsets(EdgeInsets(top: 0,
+                                              leading: 0,
+                                              bottom: 0,
+                                              trailing: 0))
                 }
                 .frame(height: UIScreen.height*listHeight)
                 .padding()

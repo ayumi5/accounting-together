@@ -21,7 +21,7 @@ struct ContentView: View {
                         VStack {
                             Image(systemName: "chart.pie.fill")
                             Text("Report")
-                        }
+                            }
                     }
                     .tag(1)
                 RecordView(currentCategory: categories.first!, currentAccount: accounts.first!)

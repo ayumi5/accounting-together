@@ -25,6 +25,8 @@ class Category: Object, ObjectKeyIdentifiable {
         Color.init(hex: mainColorHex)
     }
     
+    @Published var showRecordList: Bool = false
+    
     convenience init(main: String, mainImageName: String, mainColor: String, sub: String) {
         self.init()
         self.main = main

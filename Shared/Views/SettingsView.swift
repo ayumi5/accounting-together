@@ -11,12 +11,12 @@ struct SettingsView: View {
     var body: some View {
         List {
             NavigationLink(
-                destination: AccountView(),
+                destination: AccountRegistrationView(),
                 label: {
                     Text("Account")
                 })
             NavigationLink(
-                destination: CategoryView(),
+                destination: CategoryRegistrationView(),
                 label: {
                     Text("Category")
                 })

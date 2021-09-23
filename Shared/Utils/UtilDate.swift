@@ -32,3 +32,34 @@ enum Month: Int, Identifiable {
     }
      
 }
+
+class UtilDate {
+    static var myDateFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.calendar = Calendar(identifier: .gregorian)
+        formatter.dateFormat = "yyyy/MM/dd HH:mm"
+        return formatter
+    }
+    
+    static func convertStringToDate(_ dateStr: String, in format: String?) -> Date? {
+        if let myFormat = format {
+            let formatter = DateFormatter()
+            formatter.calendar = Calendar(identifier: .gregorian)
+            formatter.dateFormat = myFormat
+            return formatter.date(from: dateStr)
+        } else {
+            return myDateFormatter.date(from: dateStr)
+        }
+    }
+    
+    static func convertDateToString(_ date: Date, in format: String?) -> String {
+        if let myFormat = format {
+            let formatter = DateFormatter()
+            formatter.calendar = Calendar(identifier: .gregorian)
+            formatter.dateFormat = myFormat
+            return formatter.string(from: date)
+        } else {
+            return myDateFormatter.string(from: date)
+        }
+    }
+}
