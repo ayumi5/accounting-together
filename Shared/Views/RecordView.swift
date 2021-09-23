@@ -8,6 +8,7 @@
 import SwiftUI
 import RealmSwift
 import Combine
+import UIKit
 
 struct RecordView: View {
     @ObservedResults(Category.self) var categories
@@ -17,6 +18,7 @@ struct RecordView: View {
     @State private var expense: String = ""
     @State private var selectedDate = Date()
     @State private var showAlert = false
+    @State private var note: String = ""
     
     var body: some View {
         Form {
@@ -37,7 +39,7 @@ struct RecordView: View {
                 currentCategory.mainImage
                     .resizable()
                     .frame(width: 20, height: 20)
-                Picker("", selection: $currentCategory) {
+                Picker("Category", selection: $currentCategory) {
                     ForEach(categories, id: \.self) { category in
                         HStack {
                             Text(category.main)
@@ -55,9 +57,21 @@ struct RecordView: View {
                 }
             }.padding()
             
+            HStack {
+                Image(systemName: "note.text")
+                TextField("write a note...", text: $note)
+                    .frame(height: 24)
+                    .padding(EdgeInsets(top: 8, leading: 6, bottom: 8, trailing: 6))
+                    .autocapitalization(.none)
+                    .disableAutocorrection(true)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 6)
+                            .stroke(Color(UIColor.separator), lineWidth: 1)
+                    )
+            }.padding()
+            
             Button(action: {
-                let record = Record(price: Int(expense) ?? 0, date: selectedDate, isReimbursed: false, whoReimnurse: nil)
-                print("price: \(expense)")
+                let record = Record(price: Int(expense) ?? 0, date: selectedDate, isReimbursed: false, whoReimnurse: nil, note: note)
                 if record.expense == 0 {
                     showAlert = true
                     // show the alert if no price is entered
@@ -87,6 +101,7 @@ struct RecordView: View {
         currentCategory = categories.first!
         currentAccount = accounts.first!
         showAlert = false
+        note = ""
     }
 }
 

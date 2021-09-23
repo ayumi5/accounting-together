@@ -27,12 +27,13 @@ class Record: Object, ObjectKeyIdentifiable {
         linkedAccount.first!
     }
     
-    convenience init(price: Int, date: Date, isReimbursed: Bool, whoReimnurse: Account?) {
+    convenience init(price: Int, date: Date, isReimbursed: Bool, whoReimnurse: Account?, note: String) {
         self.init()
         self.expense = price
         self.date = date
         self.isReimbursed = isReimbursed
         self.whoReimburse = whoReimburse
+        self.note = note
     }
 }
 
