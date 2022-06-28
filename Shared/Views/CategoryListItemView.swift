@@ -17,12 +17,6 @@ struct CategoryListItemView: View {
         let datePredicate = NSPredicate("date", fromDate: selectedMonth.firstDay as NSDate, toDate: selectedMonth.lastDay as NSDate)
         let categoryRecords = category.records.filter(datePredicate)
         return    Button(action: {
-            //                if showRecord.category != "" && showRecord.category != category.main {
-            //                    showRecord.category = category.main
-            //                } else {
-            //                    showRecord.category = category.main
-            //                    showRecord.shown.toggle()
-            //                }
             showRecord.category = category.main
             showRecord.shown.toggle()
             category.showRecordList.toggle()
@@ -30,7 +24,6 @@ struct CategoryListItemView: View {
         }) {
             HStack {
                 if showRecord.category == category.main && showRecord.shown == true {
-//                if category.showRecordList {
                     Image(systemName: "chevron.down")
                         .foregroundColor(Color.black)
                 } else {
@@ -52,10 +45,3 @@ struct CategoryListItemView: View {
         .foregroundColor(Color.black)
     }
 }
-
-//struct CategoryListItemView_Previews: PreviewProvider {
-//    let category = Category(main: "Food", mainImageName: "Food", mainColor: "#D9508AFF", sub: ""),
-//    static var previews: some View {
-//        CategoryListItemView(category: category)
-//    }
-//}

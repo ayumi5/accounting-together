@@ -104,9 +104,3 @@ struct RecordView: View {
         note = ""
     }
 }
-
-//struct RecordView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        RecordView()
-//    }
-//}

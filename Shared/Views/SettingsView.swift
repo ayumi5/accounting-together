@@ -15,11 +15,6 @@ struct SettingsView: View {
                 label: {
                     Text("Account")
                 })
-            NavigationLink(
-                destination: CategoryRegistrationView(),
-                label: {
-                    Text("Category")
-                })
         }
     }
 }
