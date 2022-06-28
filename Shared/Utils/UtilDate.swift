@@ -24,7 +24,8 @@ enum Month: Int, Identifiable {
     case Dec
     
     var firstDay: Date {
-        DateComponents(calendar: Date.calendar, year: 2021, month: self.rawValue, day: 1).date!
+        let currentYear = Calendar.current.component(.year, from: Date())
+        return DateComponents(calendar: Date.calendar, year: currentYear, month: self.rawValue, day: 1).date!
     }
     
     var lastDay: Date {

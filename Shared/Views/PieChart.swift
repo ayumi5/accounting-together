@@ -11,7 +11,7 @@ import Charts
 struct PieChart: UIViewRepresentable {
     var totalExpenseAmount = 0
     var categories = [Category]()
-    @Binding var currentYearMonth: Int
+    @Binding var currentMonth: Int
     
     func makeUIView(context: Context) -> PieChartView {
         let pieChart = PieChartView()
@@ -50,7 +50,7 @@ struct PieChart: UIViewRepresentable {
     private func convertRecordsToEntries() -> [PieChartDataEntry] {
         var entries: [PieChartDataEntry] = []
         for category in categories {
-            let selectedMonth = Month.init(rawValue: currentYearMonth)!
+            let selectedMonth = Month.init(rawValue: currentMonth)!
             let datePredicate = NSPredicate.init("date", fromDate: selectedMonth.firstDay as NSDate, toDate: selectedMonth.lastDay as NSDate)
             let categoryRecords = category.records.filter(datePredicate)
             let categoryTotal = Array(categoryRecords).totalExpenseAmount()
@@ -67,6 +67,6 @@ struct PieChart: UIViewRepresentable {
 struct PieChart_Previews: PreviewProvider {
     @State static var currentYearMonth: Int = 9
     static var previews: some View { 
-        PieChart(currentYearMonth: $currentYearMonth)
+        PieChart(currentMonth: $currentYearMonth)
     }
 }

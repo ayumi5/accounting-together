@@ -8,31 +8,33 @@
 import SwiftUI
 
 struct MonthYearPicker: View {
-    @Binding var currnetYearMonth: Int
+    @Binding var currentYear: Int
+    @Binding var currnetMonth: Int
     
-    init(currentYearMonth: Binding<Int>) {
-        self._currnetYearMonth = currentYearMonth
+    init(currentYear: Binding<Int>, currentMonth: Binding<Int>) {
+        self._currentYear = currentYear
+        self._currnetMonth = currentMonth
     }
     
     var body: some View {
         HStack {
             Button(action: {
                 // to previous month
-                if currnetYearMonth > 1 {
-                    currnetYearMonth -= 1
+                if currnetMonth > 1 {
+                    currnetMonth -= 1
                 }
             }) {
                 Image(systemName: "arrowtriangle.backward")
                     .padding()
             }
             Spacer()
-            Text("2021 / \(currnetYearMonth)")
+            Text("\(String(currentYear)) / \(currnetMonth)")
                 .font(.title)
             Spacer()
             Button(action: {
                 // to next month
-                if currnetYearMonth < 12 {
-                    currnetYearMonth += 1
+                if currnetMonth < 12 {
+                    currnetMonth += 1
                 }
             }) {
                 Image(systemName: "arrowtriangle.right")
@@ -43,8 +45,9 @@ struct MonthYearPicker: View {
 }
 
 struct MonthYearPicker_Previews: PreviewProvider {
-    @State static var currentYearMonth: Int = 0
+    @State static var currentYear: Int = 2022
+    @State static var currentMonth: Int = 0
     static var previews: some View {
-        MonthYearPicker(currentYearMonth: $currentYearMonth)
+        MonthYearPicker(currentYear: $currentYear, currentMonth: $currentMonth)
     }
 }

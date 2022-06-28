@@ -9,7 +9,8 @@ import SwiftUI
 import RealmSwift
 
 struct ReportView: View {
-    @State private var currentYearMonth: Int = Date.calendar.component(.month, from: Date())
+    @State private var currentYear: Int = Date.calendar.component(.year, from: Date())
+    @State private var currentMonth: Int = Date.calendar.component(.month, from: Date())
     
     private let unit: String = "¥"
     private let listHeight:CGFloat = 0.3
@@ -18,20 +19,20 @@ struct ReportView: View {
     @State private var showRecord = (category: "", shown: false)
         
     var body: some View {
-        let selectedMonth = Month.init(rawValue: currentYearMonth)!
+        let selectedMonth = Month.init(rawValue: currentMonth)!
         let datePredicate = NSPredicate("date", fromDate: selectedMonth.firstDay as NSDate, toDate: selectedMonth.lastDay as NSDate)
         let recordsDatePredicate = NSPredicate("Any records.date", fromDate: selectedMonth.firstDay as NSDate, toDate: selectedMonth.lastDay as NSDate)
         let filteredRecords = Array(records.filter(datePredicate))
         let categories = realm.objects(Category.self).filter(recordsDatePredicate)
         
         return VStack {
-            MonthYearPicker(currentYearMonth: $currentYearMonth)
+            MonthYearPicker(currentYear: $currentYear, currentMonth: $currentMonth)
             if filteredRecords.count > 0 {
                 Text("\(unit) \(filteredRecords.totalExpenseAmount())")
                     .padding()
                     .font(.title)
                 Spacer()
-                PieChart(totalExpenseAmount: filteredRecords.totalExpenseAmount(), categories: Array(categories), currentYearMonth: $currentYearMonth)
+                PieChart(totalExpenseAmount: filteredRecords.totalExpenseAmount(), categories: Array(categories), currentMonth: $currentMonth)
                     .padding()
                 Spacer()
                 List(categories, id: \.self) { category in
@@ -71,14 +72,14 @@ struct ReportView: View {
             .onEnded({ value in
                 if value.translation.width < 0 {
                     // left swipe
-                    if currentYearMonth < 12 {
-                        currentYearMonth += 1
+                    if currentMonth < 12 {
+                        currentMonth += 1
                     }
                 }
                 if value.translation.width > 1 {
                     // right swipe
-                    if currentYearMonth > 0 {
-                        currentYearMonth -= 1
+                    if currentMonth > 0 {
+                        currentMonth -= 1
                     }
                 }
             })
