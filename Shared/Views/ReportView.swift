@@ -17,6 +17,10 @@ struct ReportView: View {
     @ObservedResults(Record.self) var records
     private let realm = Realm.myRealm
     @State private var showRecord = (category: "", shown: false)
+    
+    init() {
+        UITableView.appearance().backgroundColor = UIColor.white
+    }
         
     var body: some View {
         let selectedMonth = Month.init(rawValue: currentMonth)!
@@ -51,7 +55,6 @@ struct ReportView: View {
                             }
                         }
                     }
-                    .background(Color.white)
                     .listRowInsets(EdgeInsets(top: 0,
                                               leading: 0,
                                               bottom: 0,
@@ -62,7 +65,6 @@ struct ReportView: View {
             } else {
                 Text("No record yet")
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .background(Color.white)
             }
         }.gesture(drag)
     }
