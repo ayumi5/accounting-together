@@ -20,7 +20,6 @@ struct CategoryListItemView: View {
             showRecord.category = category.main
             showRecord.shown.toggle()
             category.showRecordList.toggle()
-            print("category.showRecordList: \(category.showRecordList)")
         }) {
             HStack {
                 if showRecord.category == category.main && showRecord.shown == true {
