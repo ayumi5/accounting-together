@@ -35,19 +35,6 @@ struct ContentView: View {
             }
             .navigationTitle("Report")
             .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    NavigationLink(
-                        destination: SettingsView()) {
-                        // TODO: change the button color
-                        Button(action: {
-                            
-                        }){
-                            Image(systemName: "gearshape.fill")
-                        }
-                        }
-                }
-            }
         }
     }
 }
