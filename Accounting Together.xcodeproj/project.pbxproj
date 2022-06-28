@@ -63,6 +63,7 @@
 		37E0686826F1899100F012C4 /* AccountRegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E0686626F1899100F012C4 /* AccountRegistrationView.swift */; };
 		3F02556DB75C94314200706C /* Pods_Accounting_Together__macOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C46AABB82E9DD78E2E11433B /* Pods_Accounting_Together__macOS_.framework */; };
 		A1E5004CA2A315F7F45CEA07 /* Pods_Accounting_Together__iOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D41D52D6407747C23961140 /* Pods_Accounting_Together__iOS_.framework */; };
+		DABBDB50286AD61C002141C4 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DABBDB4F286AD61C002141C4 /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +127,7 @@
 		81CF079048D50961DF7E8D01 /* Pods-Accounting Together (macOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Accounting Together (macOS).release.xcconfig"; path = "Target Support Files/Pods-Accounting Together (macOS)/Pods-Accounting Together (macOS).release.xcconfig"; sourceTree = "<group>"; };
 		8FC0785C38E9D31CA79E25D1 /* Pods-Accounting Together (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Accounting Together (iOS).debug.xcconfig"; path = "Target Support Files/Pods-Accounting Together (iOS)/Pods-Accounting Together (iOS).debug.xcconfig"; sourceTree = "<group>"; };
 		C46AABB82E9DD78E2E11433B /* Pods_Accounting_Together__macOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Accounting_Together__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DABBDB4F286AD61C002141C4 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 		3744376126DB355800418450 = {
 			isa = PBXGroup;
 			children = (
+				DABBDB4F286AD61C002141C4 /* Settings.bundle */,
 				3744376626DB355800418450 /* Shared */,
 				3744377326DB356000418450 /* iOS */,
 				3744377A26DB356000418450 /* macOS */,
@@ -435,6 +438,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				372247F826E0C6320084D324 /* Color.xcassets in Resources */,
+				DABBDB50286AD61C002141C4 /* Settings.bundle in Resources */,
 				3744379B26DB356000418450 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
